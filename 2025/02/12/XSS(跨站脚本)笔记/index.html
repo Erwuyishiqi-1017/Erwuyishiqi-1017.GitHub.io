@@ -6,20 +6,21 @@
   <meta name="renderer" content="webkit">
   <meta http-equiv="X-UA-Compatible" content="IE=edge" >
   <link rel="dns-prefetch" href="http://example.com">
-  <title>Hello World | Hexo</title>
+  <title>XSS(跨站脚本)笔记 | Hexo</title>
   <meta name="generator" content="hexo-theme-yilia-plus">
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
   
-  <meta name="description" content="Welcome to Hexo! This is your very first post. Check documentation for more info. If you get any problems when using Hexo, you can find the answer in troubleshooting or you can ask me on GitHub. Quick">
+  <meta name="description" content="XSS又叫CSS（Cross Site Script）跨站脚本攻击是指恶意攻击者往Web页面里插入恶意Script代码，当用户浏览该页之时，嵌入其中Web里面的Script代码会被执行，从而达到恶意攻击用户的目的。攻击者对含有漏洞的服务器发起XSS攻击（注入JS代码）诱使受害者打开受到攻击的服务器URL。受害者在Web浏览器中打开URL，恶意脚本执行。 攻击类型反射型XSS&lt;非持久化&gt;">
 <meta property="og:type" content="article">
-<meta property="og:title" content="Hello World">
-<meta property="og:url" content="http://example.com/2025/02/12/hello-world/index.html">
+<meta property="og:title" content="XSS(跨站脚本)笔记">
+<meta property="og:url" content="http://example.com/2025/02/12/XSS(%E8%B7%A8%E7%AB%99%E8%84%9A%E6%9C%AC)%E7%AC%94%E8%AE%B0/index.html">
 <meta property="og:site_name" content="Hexo">
-<meta property="og:description" content="Welcome to Hexo! This is your very first post. Check documentation for more info. If you get any problems when using Hexo, you can find the answer in troubleshooting or you can ask me on GitHub. Quick">
+<meta property="og:description" content="XSS又叫CSS（Cross Site Script）跨站脚本攻击是指恶意攻击者往Web页面里插入恶意Script代码，当用户浏览该页之时，嵌入其中Web里面的Script代码会被执行，从而达到恶意攻击用户的目的。攻击者对含有漏洞的服务器发起XSS攻击（注入JS代码）诱使受害者打开受到攻击的服务器URL。受害者在Web浏览器中打开URL，恶意脚本执行。 攻击类型反射型XSS&lt;非持久化&gt;">
 <meta property="og:locale" content="en_US">
-<meta property="article:published_time" content="2025-02-12T06:37:59.120Z">
-<meta property="article:modified_time" content="2025-02-12T06:37:59.120Z">
+<meta property="article:published_time" content="2025-02-12T08:11:29.000Z">
+<meta property="article:modified_time" content="2025-02-12T13:04:28.614Z">
 <meta property="article:author" content="John Doe">
+<meta property="article:tag" content="XSS">
 <meta name="twitter:card" content="summary">
   
     <link rel="alternative" href="/atom.xml" title="Hexo" type="application/atom+xml">
@@ -202,22 +203,22 @@
               class="anm-canvas"></canvas>
           </div>
           <div id="js-content" class="content-ll">
-            <article id="post-hello-world" class="article article-type-post " itemscope itemprop="blogPost">
+            <article id="post-XSS(跨站脚本)笔记" class="article article-type-post " itemscope itemprop="blogPost">
   <div class="article-inner">
     
       <header class="article-header">
   
   
     <h1 class="article-title" itemprop="name">
-      Hello World
+      XSS(跨站脚本)笔记
     </h1>
   
 
 
   
   
-<a href="/2025/02/12/hello-world/" class="archive-article-date">
-        <time datetime="2025-02-12T06:37:59.120Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2025-02-12</time>
+<a href="/2025/02/12/XSS(%E8%B7%A8%E7%AB%99%E8%84%9A%E6%9C%AC)%E7%AC%94%E8%AE%B0/" class="archive-article-date">
+        <time datetime="2025-02-12T08:11:29.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2025-02-12</time>
 </a>
 
   
@@ -230,7 +231,7 @@
       <!-- 百度字体平台:http://fontstore.baidu.com/static/editor/index.html -->
       <i class="icon-statistics"></i>
       <span class="post-meta-item-text"> 字数统计:</span>
-      <span class="post-count">75字</span>
+      <span class="post-count">907字</span>
     </span>
   </span>
 
@@ -239,7 +240,7 @@
     <span class="post-meta-item-icon">
       <i class="icon-book icon"></i>
       <span class="post-meta-item-text"> 阅读时长≈</span>
-      <span class="post-count">1分</span>
+      <span class="post-count">3分</span>
     </span>
   </span>
 </div>
@@ -250,19 +251,15 @@
   
   <div class="article-entry" itemprop="articleBody">
     
-    <p>Welcome to <a target="_blank" rel="noopener" href="https://hexo.io/">Hexo</a>! This is your very first post. Check <a target="_blank" rel="noopener" href="https://hexo.io/docs/">documentation</a> for more info. If you get any problems when using Hexo, you can find the answer in <a target="_blank" rel="noopener" href="https://hexo.io/docs/troubleshooting.html">troubleshooting</a> or you can ask me on <a target="_blank" rel="noopener" href="https://github.com/hexojs/hexo/issues">GitHub</a>.</p>
-<h2 id="Quick-Start"><a href="#Quick-Start" class="headerlink" title="Quick Start"></a>Quick Start</h2><h3 id="Create-a-new-post"><a href="#Create-a-new-post" class="headerlink" title="Create a new post"></a>Create a new post</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ hexo new <span class="string">&quot;My New Post&quot;</span></span><br></pre></td></tr></table></figure>
-
-<p>More info: <a target="_blank" rel="noopener" href="https://hexo.io/docs/writing.html">Writing</a></p>
-<h3 id="Run-server"><a href="#Run-server" class="headerlink" title="Run server"></a>Run server</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ hexo server</span><br></pre></td></tr></table></figure>
-
-<p>More info: <a target="_blank" rel="noopener" href="https://hexo.io/docs/server.html">Server</a></p>
-<h3 id="Generate-static-files"><a href="#Generate-static-files" class="headerlink" title="Generate static files"></a>Generate static files</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ hexo generate</span><br></pre></td></tr></table></figure>
-
-<p>More info: <a target="_blank" rel="noopener" href="https://hexo.io/docs/generating.html">Generating</a></p>
-<h3 id="Deploy-to-remote-sites"><a href="#Deploy-to-remote-sites" class="headerlink" title="Deploy to remote sites"></a>Deploy to remote sites</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ hexo deploy</span><br></pre></td></tr></table></figure>
-
-<p>More info: <a target="_blank" rel="noopener" href="https://hexo.io/docs/one-command-deployment.html">Deployment</a></p>
+    <h2 id="XSS又叫CSS（Cross-Site-Script）跨站脚本攻击是指恶意攻击者往Web页面里插入恶意Script代码，当用户浏览该页之时，嵌入其中Web里面的Script代码会被执行，从而达到恶意攻击用户的目的。"><a href="#XSS又叫CSS（Cross-Site-Script）跨站脚本攻击是指恶意攻击者往Web页面里插入恶意Script代码，当用户浏览该页之时，嵌入其中Web里面的Script代码会被执行，从而达到恶意攻击用户的目的。" class="headerlink" title="XSS又叫CSS（Cross Site Script）跨站脚本攻击是指恶意攻击者往Web页面里插入恶意Script代码，当用户浏览该页之时，嵌入其中Web里面的Script代码会被执行，从而达到恶意攻击用户的目的。"></a>XSS又叫CSS（Cross Site Script）跨站脚本攻击是指恶意攻击者往Web页面里插入恶意Script代码，当用户浏览该页之时，嵌入其中Web里面的Script代码会被执行，从而达到恶意攻击用户的目的。</h2><p>攻击者对含有漏洞的服务器发起XSS攻击（注入JS代码）<br>诱使受害者打开受到攻击的服务器URL。<br>受害者在Web浏览器中打开URL，恶意脚本执行。</p>
+<h2 id="攻击类型"><a href="#攻击类型" class="headerlink" title="攻击类型"></a>攻击类型</h2><h3 id="反射型XSS"><a href="#反射型XSS" class="headerlink" title="反射型XSS&lt;非持久化&gt;"></a>反射型XSS&lt;非持久化&gt;</h3><p> 攻击者事先制作好攻击链接, 需要欺骗用户自己去点击链接才能触发XSS代码（服务器中没有这样的页面和内容），一般容易出现在搜索页面。一般是后端代码进行处理</p>
+<h3 id="存储型XSS"><a href="#存储型XSS" class="headerlink" title="存储型XSS&lt;持久化&gt;"></a>存储型XSS&lt;持久化&gt;</h3><p>代码是存储在服务器数据库中的，如在个人信息或发表文章等地方，加入代码，如果没有过滤或过滤不严，那么这些代码将储存到服务器中，每当有用户访问该页面的时候都会触发代码执行，这种XSS非常危险，容易造成蠕虫，大量盗窃cookie（虽然还有种DOM型XSS，但是也还是包括在存储型XSS内）。</p>
+<h3 id="DOM型XSS"><a href="#DOM型XSS" class="headerlink" title="DOM型XSS"></a>DOM型XSS</h3><p>基于文档对象模型Document Objeet Model，DOM)的一种漏洞。DOM是一个与平台、编程语言无关的接口，它允许程序或脚本动态地访问和更新文档内容、结构和样式，处理后的结果能够成为显示页面的一部分。DOM中有很多对象，其中一些是用户可以操纵的，如uRI ，location，refelTer等。客户端的脚本程序可以通过DOM动态地检查和修改页面内容，它不依赖于提交数据到服务器端，而从客户端获得DOM中的数据在本地执行，如果DOM中的数据没有经过严格确认，就会产生DOM XSS漏洞。一般是浏览器前端代码进行处理。</p>
+<h2 id="危害"><a href="#危害" class="headerlink" title="危害"></a>危害</h2><p>1.挂马<br>2.盗取用户Cookie。<br>3.DOS（拒绝服务）客户端浏览器。<br>4.钓鱼攻击，高级的钓鱼技巧。<br>5.删除目标文章、恶意篡改数据、嫁祸。<br>6.劫持用户Web行为，甚至进一步渗透内网。<br>7.爆发Web2.0蠕虫。<br>8.蠕虫式的DDoS攻击。<br>9.蠕虫式挂马攻击、刷广告、刷浏量、破坏网上数据</p>
+<h2 id="XSS攻击常见标签与属性"><a href="#XSS攻击常见标签与属性" class="headerlink" title="XSS攻击常见标签与属性"></a>XSS攻击常见标签与属性</h2><h3 id="1-scirpt-标签（标签用于定义客户端脚本，比如JavaScript）"><a href="#1-scirpt-标签（标签用于定义客户端脚本，比如JavaScript）" class="headerlink" title="1.scirpt 标签（&lt;script&gt;标签用于定义客户端脚本，比如JavaScript）"></a>1.scirpt 标签（<code>&lt;script&gt;</code>标签用于定义客户端脚本，比如JavaScript）</h3><p><code>&lt;script&gt;alert(1);&lt;/script&gt;</code><br><code>&lt;script&gt;alert(&quot;xss&quot;);&lt;/script&gt;</code></p>
+<h3 id="2-img-标签（标签定义-HTML-页面中的图像）"><a href="#2-img-标签（标签定义-HTML-页面中的图像）" class="headerlink" title="2.img 标签（&lt;img&gt;标签定义 HTML 页面中的图像）"></a>2.img 标签（<code>&lt;img&gt;</code>标签定义 HTML 页面中的图像）</h3><p><code>&lt;img src=1 onerror=alert(1);&gt;</code><br><code>&lt;img src=1 onerror=alert(&quot;xss&quot;);&gt;</code></p>
+<h3 id="3-input-标签-标签规定了用户可以在其中输入数据的输入字段。"><a href="#3-input-标签-标签规定了用户可以在其中输入数据的输入字段。" class="headerlink" title="3.input 标签(&lt;input&gt; 标签规定了用户可以在其中输入数据的输入字段。)"></a>3.input 标签(<code>&lt;input&gt;</code> 标签规定了用户可以在其中输入数据的输入字段。)</h3><p>onfocus 事件在对象获得焦点时发生：<br><code>&lt;input onfocus=alert(1);&gt;</code><br><code>&lt;input onblur=alert(1) autofocus&gt;&lt;input autofocus&gt;</code><br><code>&quot; οnclick=alert(1)&gt; 这样需要点击一下输入框&lt;br&gt;</code><br><code>&quot; onmouseover=alert(1)&gt; 需要鼠标划过输入框&lt;br&gt;</code></p>
+<h3 id="4-details-标签-标签通过提供用户开启关闭的交互式控件，规定了用户可见的或者隐藏的需求的补充细节。"><a href="#4-details-标签-标签通过提供用户开启关闭的交互式控件，规定了用户可见的或者隐藏的需求的补充细节。" class="headerlink" title="4.details 标签(&lt;details&gt; 标签通过提供用户开启关闭的交互式控件，规定了用户可见的或者隐藏的需求的补充细节。"></a>4.details 标签(<code>&lt;details&gt;</code> 标签通过提供用户开启关闭的交互式控件，规定了用户可见的或者隐藏的需求的补充细节。</h3><p>ontoggle 事件规定了在用户打开或关闭 <code>&lt;details&gt;</code> 元素时触发)<br>使用details 标签的 open 属性触发ontoggle事件，无需用户去点击即可触发<br><code>&lt;details ontoggle=alert(1);&gt;</code><br><code>&lt;details open ontoggle=alert(1);&gt;</code></p>
 
     
 
@@ -274,6 +271,17 @@
   <div class="article-info article-info-index">
     
     
+	<div class="article-tag tagcloud">
+		<i class="icon-price-tags icon"></i>
+		<ul class="article-tag-list">
+			 
+        		<li class="article-tag-list-item">
+        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color4">XSS</a>
+        		</li>
+      		
+		</ul>
+	</div>
+
     
 
     
@@ -324,7 +332,7 @@
     <a class="close js-modal-close" href="javascript:;"><i class="icon icon-close"></i></a>
     <p>扫一扫，分享到微信</p>
     <div class="wx-qrcode">
-     <!-- <img src="//pan.baidu.com/share/qrcode?url=http://example.com/2025/02/12/hello-world/" alt="微信分享二维码"> -->
+     <!-- <img src="//pan.baidu.com/share/qrcode?url=http://example.com/2025/02/12/XSS(%E8%B7%A8%E7%AB%99%E8%84%9A%E6%9C%AC)%E7%AC%94%E8%AE%B0/" alt="微信分享二维码"> -->
     </div>
 </div>
 
@@ -339,15 +347,20 @@
 
 <nav id="article-nav">
   
-    <a href="/2025/02/12/XSS(%E8%B7%A8%E7%AB%99%E8%84%9A%E6%9C%AC)%E7%AC%94%E8%AE%B0/" id="article-nav-newer" class="article-nav-link-wrap">
+    <a href="/2025/02/12/SQL%E6%B3%A8%E5%85%A5%E7%AC%94%E8%AE%B0/" id="article-nav-newer" class="article-nav-link-wrap">
       <i class="icon-circle-left"></i>
       <div class="article-nav-title">
         
-          XSS(跨站脚本)笔记
+          SQL注入笔记
         
       </div>
     </a>
   
+  
+    <a href="/2025/02/12/hello-world/" id="article-nav-older" class="article-nav-link-wrap">
+      <div class="article-nav-title">Hello World</div>
+      <i class="icon-circle-right"></i>
+    </a>
   
 </nav>
 

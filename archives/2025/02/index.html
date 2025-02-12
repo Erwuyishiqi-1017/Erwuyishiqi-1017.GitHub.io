@@ -38,9 +38,6 @@
   
 
   
-    
- 	  <script src="/lib/clickLove.js"></script>
-  
   
 
 
@@ -219,6 +216,92 @@
     <header class="archive-article-header">
       	<div class="article-meta">
 	      	
+<a href="/2025/02/12/SQL%E6%B3%A8%E5%85%A5%E7%AC%94%E8%AE%B0/" class="archive-article-date">
+        <time datetime="2025-02-12T08:11:29.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2025-02-12</time>
+</a>
+
+        </div>
+    	 
+  
+    <h1 itemprop="name">
+	
+	  <a class="archive-article-title" href="/2025/02/12/SQL%E6%B3%A8%E5%85%A5%E7%AC%94%E8%AE%B0/" target="_blank">SQL注入笔记</a>
+  
+    </h1>
+  
+
+
+        <div class="article-info info-on-right">
+          
+	<div class="article-tag tagcloud">
+		<i class="icon-price-tags icon"></i>
+		<ul class="article-tag-list">
+			 
+        		<li class="article-tag-list-item">
+        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color4">SQL</a>
+        		</li>
+      		
+		</ul>
+	</div>
+
+          
+
+        </div>
+        <div class="clearfix"></div>
+    </header>
+  </div>
+</article>
+  
+    
+    
+    <article class="archive-article archive-type-post">
+  <div class="archive-article-inner">
+    <header class="archive-article-header">
+      	<div class="article-meta">
+	      	
+<a href="/2025/02/12/XSS(%E8%B7%A8%E7%AB%99%E8%84%9A%E6%9C%AC)%E7%AC%94%E8%AE%B0/" class="archive-article-date">
+        <time datetime="2025-02-12T08:11:29.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2025-02-12</time>
+</a>
+
+        </div>
+    	 
+  
+    <h1 itemprop="name">
+	
+	  <a class="archive-article-title" href="/2025/02/12/XSS(%E8%B7%A8%E7%AB%99%E8%84%9A%E6%9C%AC)%E7%AC%94%E8%AE%B0/" target="_blank">XSS(跨站脚本)笔记</a>
+  
+    </h1>
+  
+
+
+        <div class="article-info info-on-right">
+          
+	<div class="article-tag tagcloud">
+		<i class="icon-price-tags icon"></i>
+		<ul class="article-tag-list">
+			 
+        		<li class="article-tag-list-item">
+        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color4">XSS</a>
+        		</li>
+      		
+		</ul>
+	</div>
+
+          
+
+        </div>
+        <div class="clearfix"></div>
+    </header>
+  </div>
+</article>
+  
+    
+    
+    <article class="archive-article archive-type-post">
+  <div class="archive-article-inner">
+    <header class="archive-article-header">
+      	<div class="article-meta">
+	      	
 <a href="/2025/02/12/hello-world/" class="archive-article-date">
         <time datetime="2025-02-12T06:37:59.120Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2025-02-12</time>
 </a>
@@ -363,6 +446,14 @@
             <input type="checkbox" q-on="click:toggleTag(e)" q-attr="checked:showTags">
           </label>
           <ul class="article-tag-list" q-show="showTags">
+             
+              <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color4">SQL</a>
+              </li>
+             
+              <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color4">XSS</a>
+              </li>
             
             <div class="clearfix"></div>
           </ul>
@@ -493,6 +584,35 @@
   </div>
 
   
+<script type="text/javascript" src="/plugins/TweenMax/TweenMax.min.js"></script>
+<script type="text/javascript" src="/plugins/TweenMax/HoverImg.js"></script>
+
+<script>
+
+
+  var hoverEffect = {
+    "subNav": ".left-col .social a"
+  }
+
+
+  for (var x in hoverEffect) {
+    // 初始化data-img属性值
+    let $em = document.querySelectorAll(hoverEffect[x]);
+    $em.forEach(($a) => {
+      //console.log($a.href);
+      if (isImageType($a.href)) {
+        $a.setAttribute("data-img", $a.href)
+      }
+    })
+    // 实现悬停元素预览图片效果
+    let $a = document.querySelectorAll(hoverEffect[x] + "[data-img]");
+    $a.forEach(($em) => {
+      new HoverImgFx1($em)
+    })
+  }
+
+</script>
+
   
 <script type="text/javascript" src="/plugins/activate-power-mode/activate-power-mode.js"></script>
 <script>

@@ -5,28 +5,26 @@
   
   <meta name="renderer" content="webkit">
   <meta http-equiv="X-UA-Compatible" content="IE=edge" >
-  <link rel="dns-prefetch" href="http://example.com">
-  <title>SQL注入笔记 | Hexo</title>
+  <link rel="dns-prefetch" href="https://erwuyishiqi-1017.github.io">
+  <title>SQL注入笔记 | 二五一十七</title>
   <meta name="generator" content="hexo-theme-yilia-plus">
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
   
-  <meta name="description" content="SQL注入（SQL Injection）是一种常见的Web安全漏洞，形成的主要原因是web应用程序在接收相关数据参数时未做好过滤，将其直接带入到数据库中查询，导致攻击者可以拼接执行构造的SQL语句。 数字型语句：select * from table where id &#x3D;3 字符型语句：select * from table where name&#x3D;’admin’  漏洞产生原因">
+  <meta name="description" content="SQL注入（SQL Injection）是一种常见的Web安全漏洞，形成的主要原因是web应用程序在接收相关数据参数时未做好过滤，将其直接带入到数据库中查询，导致攻击者可以拼接执行构造的SQL语句。">
 <meta property="og:type" content="article">
 <meta property="og:title" content="SQL注入笔记">
-<meta property="og:url" content="http://example.com/2025/02/12/SQL%E6%B3%A8%E5%85%A5%E7%AC%94%E8%AE%B0/index.html">
-<meta property="og:site_name" content="Hexo">
-<meta property="og:description" content="SQL注入（SQL Injection）是一种常见的Web安全漏洞，形成的主要原因是web应用程序在接收相关数据参数时未做好过滤，将其直接带入到数据库中查询，导致攻击者可以拼接执行构造的SQL语句。 数字型语句：select * from table where id &#x3D;3 字符型语句：select * from table where name&#x3D;’admin’  漏洞产生原因">
+<meta property="og:url" content="https://erwuyishiqi-1017.github.io/2025/02/12/SQL%E6%B3%A8%E5%85%A5%E7%AC%94%E8%AE%B0/">
+<meta property="og:site_name" content="二五一十七">
+<meta property="og:description" content="SQL注入（SQL Injection）是一种常见的Web安全漏洞，形成的主要原因是web应用程序在接收相关数据参数时未做好过滤，将其直接带入到数据库中查询，导致攻击者可以拼接执行构造的SQL语句。">
 <meta property="og:locale" content="en_US">
 <meta property="article:published_time" content="2025-02-12T08:11:29.000Z">
-<meta property="article:modified_time" content="2025-02-12T13:02:53.886Z">
-<meta property="article:author" content="John Doe">
+<meta property="article:modified_time" content="2025-02-13T01:08:49.121Z">
+<meta property="article:author" content="二五一十七">
 <meta property="article:tag" content="SQL">
 <meta name="twitter:card" content="summary">
   
-    <link rel="alternative" href="/atom.xml" title="Hexo" type="application/atom+xml">
   
-  
-    <link rel="icon" href="/favicon.ico">
+    <link rel="icon" href="/img/favicon.ico">
   
   
     <link rel="apple-touch-icon" href="/apple-touch-icon-180x180.png">
@@ -42,6 +40,9 @@
 
   
 
+  
+    
+ 	  <script src="/lib/clickLove.js"></script>
   
   
 
@@ -64,7 +65,7 @@
 			<img src="/img/head.jpg" class="js-avatar">
 		</a>
 		<hgroup>
-			<h1 class="header-author"><a href="/">John Doe</a></h1>
+			<h1 class="header-author"><a href="/">二五一十七</a></h1>
 		</hgroup>
 		
 
@@ -72,10 +73,6 @@
 			<ul>
 			
 				<li><a href="/" target="_blank">主页</a></li>
-			
-				<li><a href="https://zhousiwei.gitee.io/ibooks/" target="_blank">技术笔记</a></li>
-			
-				<li><a href="/tags/%E9%9A%8F%E7%AC%94/" target="_blank">随笔</a></li>
 			
 			</ul>
 		</nav>
@@ -86,10 +83,6 @@
 				
 			
 				
-					<a q-on="click: openSlider(e, 'friends')" href="javascript:void(0)">没朋友</a>
-				
-			
-				
 					<a q-on="click: openSlider(e, 'aboutme')" href="javascript:void(0)">关于我</a>
 				
 			
@@ -97,27 +90,19 @@
 		<nav class="header-nav">
 			<div class="social">
 				
-					
-						<a class="github" href="#" 
-												title="GitHub" target="_blank"><i class="icon-github"></i></a>
-					
-				
-					
-						<a class="github" href="#" 
-												title="GitHub" target="_blank"><i class="icon-github"></i></a>
-					
-				
-					
-						<a class="gitee" href="#" 
-												title="gitee" target="_blank"><i class="icon-gitee"></i></a>
-					
-				
-					
-						<a class="jianshu" href="#" 
-												title="jianshu" target="_blank"><i class="icon-jianshu"></i></a>
-					
-				
 			</div>
+		
+			
+			
+			
+			
+			<div>
+				<iframe frameborder="no" border="0" marginwidth="0" marginheight="0" width="240" height="86" src="//music.163.com/outchain/player?type=2&id=290150792&auto=0&height=66"></iframe>
+			</div>
+			
+				
+				<p style="font-size: 12px;">这似乎是首纯音乐，请尽情的欣赏它吧！<p>
+			
 		
 		</nav>
 	</header>		
@@ -140,14 +125,10 @@
 				</a>
 			</div>
 			<hgroup>
-			  <h1 class="header-author js-header-author">John Doe</h1>
+			  <h1 class="header-author js-header-author">二五一十七</h1>
 			</hgroup>
 			
 			
-			
-				
-			
-				
 			
 				
 			
@@ -156,38 +137,14 @@
 			<nav class="header-nav">
 				<div class="social">
 					
-						
-						<a class="github" target="_blank" 
-							href="#" title="GitHub"><i class="icon-github"></i></a>
-						
-					
-						
-						<a class="github" target="_blank" 
-							href="#" title="GitHub"><i class="icon-github"></i></a>
-						
-					
-						
-						<a class="gitee" target="_blank" 
-							href="#" title="gitee"><i class="icon-gitee"></i></a>
-						
-					
-						
-						<a class="jianshu" target="_blank" 
-							href="#" title="jianshu"><i class="icon-jianshu"></i></a>
-						
-					
 				</div>
 			</nav>
 
 			<nav class="header-menu js-header-menu">
-				<ul style="width: 70%">
+				<ul style="width: 50%">
 				
 				
-					<li style="width: 33.333333333333336%"><a href="/">主页</a></li>
-		        
-					<li style="width: 33.333333333333336%"><a target="_blank" rel="noopener" href="https://zhousiwei.gitee.io/ibooks/">技术笔记</a></li>
-		        
-					<li style="width: 33.333333333333336%"><a href="/tags/%E9%9A%8F%E7%AC%94/">随笔</a></li>
+					<li style="width: 100%"><a href="/">主页</a></li>
 		        
 				</ul>
 			</nav>
@@ -251,7 +208,7 @@
   
   <div class="article-entry" itemprop="articleBody">
     
-    <h2 id="SQL注入（SQL-Injection）是一种常见的Web安全漏洞，形成的主要原因是web应用程序在接收相关数据参数时未做好过滤，将其直接带入到数据库中查询，导致攻击者可以拼接执行构造的SQL语句。"><a href="#SQL注入（SQL-Injection）是一种常见的Web安全漏洞，形成的主要原因是web应用程序在接收相关数据参数时未做好过滤，将其直接带入到数据库中查询，导致攻击者可以拼接执行构造的SQL语句。" class="headerlink" title="SQL注入（SQL Injection）是一种常见的Web安全漏洞，形成的主要原因是web应用程序在接收相关数据参数时未做好过滤，将其直接带入到数据库中查询，导致攻击者可以拼接执行构造的SQL语句。"></a>SQL注入（SQL Injection）是一种常见的Web安全漏洞，形成的主要原因是web应用程序在接收相关数据参数时未做好过滤，将其直接带入到数据库中查询，导致攻击者可以拼接执行构造的SQL语句。</h2><ul>
+    <h2 id="SQL注入（SQL-Injection）是一种常见的Web安全漏洞，形成的主要原因是web应用程序在接收相关数据参数时未做好过滤，将其直接带入到数据库中查询，导致攻击者可以拼接执行构造的SQL语句。"><a href="#SQL注入（SQL-Injection）是一种常见的Web安全漏洞，形成的主要原因是web应用程序在接收相关数据参数时未做好过滤，将其直接带入到数据库中查询，导致攻击者可以拼接执行构造的SQL语句。" class="headerlink" title="SQL注入（SQL Injection）是一种常见的Web安全漏洞，形成的主要原因是web应用程序在接收相关数据参数时未做好过滤，将其直接带入到数据库中查询，导致攻击者可以拼接执行构造的SQL语句。"></a>SQL注入（SQL Injection）是一种常见的Web安全漏洞，形成的主要原因是web应用程序在接收相关数据参数时未做好过滤，将其直接带入到数据库中查询，导致攻击者可以拼接执行构造的SQL语句。<span id="more"></span></h2><ul>
 <li>数字型语句：select * from table where id &#x3D;3</li>
 <li>字符型语句：select * from table where name&#x3D;’admin’</li>
 </ul>
@@ -290,7 +247,9 @@
 <li>字段中数据的长度</li>
 <li>数据的ascii</li>
 </ol>
-<h5 id="判断数据库类型（哪个页面正常显示，就属于哪个数据库）"><a href="#判断数据库类型（哪个页面正常显示，就属于哪个数据库）" class="headerlink" title="判断数据库类型（哪个页面正常显示，就属于哪个数据库）"></a>判断数据库类型（哪个页面正常显示，就属于哪个数据库）</h5><h6 id="MySQL数据库表-information-schema-tables"><a href="#MySQL数据库表-information-schema-tables" class="headerlink" title="MySQL数据库表(information_schema.tables)"></a>MySQL数据库表(information_schema.tables)</h6><p><code>?id=1&#39; and exists(select*from information_schema.tables)</code><br>######access(msysobjects) <br><code>?id=1&#39; and exists(select*from msysobjects)</code><br>#####SQLServer(sysobjects)<br><code>?id=1&#39; and exists(select*from sysobjects)</code></p>
+<h5 id="判断数据库类型（哪个页面正常显示，就属于哪个数据库）"><a href="#判断数据库类型（哪个页面正常显示，就属于哪个数据库）" class="headerlink" title="判断数据库类型（哪个页面正常显示，就属于哪个数据库）"></a>判断数据库类型（哪个页面正常显示，就属于哪个数据库）</h5><h6 id="MySQL数据库表-information-schema-tables"><a href="#MySQL数据库表-information-schema-tables" class="headerlink" title="MySQL数据库表(information_schema.tables)"></a>MySQL数据库表(information_schema.tables)</h6><p><code>?id=1&#39; and exists(select*from information_schema.tables)</code></p>
+<h6 id="access-msysobjects"><a href="#access-msysobjects" class="headerlink" title="access(msysobjects)"></a>access(msysobjects)</h6><p><code>?id=1&#39; and exists(select*from msysobjects)</code></p>
+<h6 id="SQLServer-sysobjects"><a href="#SQLServer-sysobjects" class="headerlink" title="SQLServer(sysobjects)"></a>SQLServer(sysobjects)</h6><p><code>?id=1&#39; and exists(select*from sysobjects)</code></p>
 <h3 id="3-Time-based-blind-SQL-injection（基于时间的盲注）"><a href="#3-Time-based-blind-SQL-injection（基于时间的盲注）" class="headerlink" title="3. Time-based blind SQL injection（基于时间的盲注）"></a>3. Time-based blind SQL injection（基于时间的盲注）</h3><p>也叫延时注入。通过观察页面，既没有回显数据库内容，又没有报错信息也没有布尔类型状态，那么我们可以考虑用“绝招”–延时注入。延时注入就是将页面的时间线作为判断依据，一点一点注入出数据库的信息。<br><code>观察请求的时间线，大概在5秒以上，说明构造的sleep(5) 语句起作用，可以把这个时间线作为sql 注入的判断依据。</code><br><code>?id=1&#39; and sleep(5) --+</code></p>
 <h3 id="（HTTP头注入）"><a href="#（HTTP头注入）" class="headerlink" title="（HTTP头注入）"></a>（HTTP头注入）</h3><p>常见的sql注入一般是通过请求参数或者表单进行注入，而HTTP头部注入是通过HTTP协议头部字段值进行注入。</p>
 <h4 id="User-Agent"><a href="#User-Agent" class="headerlink" title="User-Agent"></a>User-Agent</h4><p>使得服务器能够识别客户使用的操作系统，浏览器版本等。（很多数据量大的网站中会记录客户使用的操作系统或浏览器版本等然后将其存入数据库中）。这里获取User-Agent就可以知道客户都是通过什么浏览器访问系统的，然后将其值保存到数据库中。</p>
@@ -311,7 +270,7 @@
 <h5 id="白盒"><a href="#白盒" class="headerlink" title="白盒"></a>白盒</h5><p><code>查看mysql是否为GBK编码，且是否使用preg_replace()把单引号转换成\&#39;或自带函数addslashes()进行转义</code></p>
 <h3 id="4-Stacked-queries-SQL-injection（堆叠查询SQL注入）"><a href="#4-Stacked-queries-SQL-injection（堆叠查询SQL注入）" class="headerlink" title="4. Stacked queries SQL injection（堆叠查询SQL注入）"></a>4. Stacked queries SQL injection（堆叠查询SQL注入）</h3><p> 堆叠查询也叫堆叠注入，在SQL中，分号（;）是用来表示一条sql语句的结束。试想一下我们在 ; 结束一个sql语句后继续构造下一条语句，会不会一起执行？因此这个想法也就造就了堆叠注入。而union injection（联合注入）也是将两条语句合并在一起，两者之间有什么区别么？区别就在于union 或者union all执行的语句类型是有限的，可以用来执行查询语句，而堆叠注入可以执行的是任意的语句。<br><code>id=1&#39;;update users set password=&#39;123456&#39; where id=1; --+</code></p>
 <h4 id="堆叠查询的局限性"><a href="#堆叠查询的局限性" class="headerlink" title="堆叠查询的局限性"></a><strong>堆叠查询的局限性</strong></h4><p>堆叠注入的局限性在于并不是每一个环境下都可以执行，可能受到API或者数据库引擎不支持的限制，当然了权限不足也可以解释为什么攻击者无法修改数据或者调用一些程序。虽然我们前面提到了堆叠查询可以执行任意的sql语句，但是这种注入方式并不是十分的完美的。在我们的web系统中，因为代码通常只返回一个查询结果，因此，堆叠注入第二个语句产生错误或者结果只能被忽略，我们在前端界面是无法看到返回结果的。如上面的实例如果我们不输出密码那我们是看不到这个结果的。因此，在读取数据时，我们建议使用union（联合）注入。同时在使用堆叠注入之前，我们也是需要知道一些数据库相关信息的，例如表名，列名等信息</p>
-<h3 id="二阶注入"><a href="#二阶注入" class="headerlink" title="二阶注入"></a>二阶注入</h3><p>二次注入漏洞是一种在Web应用程序中广泛存在的安全漏洞形式。相对于一次注入漏洞而言，二次注入漏洞更难以被发现，但是它却具有与—次注入攻击漏洞相同的攻击威力。<br><code>1.黑客通过构造数据的形式，在浏览器或者其他软件中提交HTTP数据报文请求到服务端进行处理，提交的数据报文请求中可能包含了黑客构造的SQL语句或者命令。</code><br><code>2.服务端应用程序会将黑客提交的数据信息进行存储，通常是保存在数据库中，保存的数据信息的主要作用是为应用程序执行其他功能提供原始输入数据并对客户端请求做出响应。</code><br><code>3.黑客向服务端发送第二个与第一次不相同的请求数据信息。</code><br><code>4.服务端接收到黑客提交的第二个请求信息后，为了处理该请求，服务端会查询数据库中已经存储的数据信息并处理，从而导致黑客在第一次请求中构造的SQL语句或者命令在服务端环境中执行。</code><br><code>5.服务端返回执行的处理结果数据信息，黑客可以通过返回的结果数据信息判断二次注入漏洞利用是否成功</code><br>二次注入就是由于将数据存储进数据库中时未做好过滤，先提交构造好的特殊字符请求存储进数据库，然后提交第二次请求时与第一次提交进数据库中的字符发生了作用，形成了一条新的sql语句导致被执行</p>
+<h3 id="二阶注入"><a href="#二阶注入" class="headerlink" title="二阶注入"></a>二阶注入</h3><p>二次注入漏洞是一种在Web应用程序中广泛存在的安全漏洞形式。相对于一次注入漏洞而言，二次注入漏洞更难以被发现，但是它却具有与—次注入攻击漏洞相同的攻击威力。<br>二次注入就是由于将数据存储进数据库中时未做好过滤，先提交构造好的特殊字符请求存储进数据库，然后提交第二次请求时与第一次提交进数据库中的字符发生了作用，形成了一条新的sql语句导致被执行<br><code>1.黑客通过构造数据的形式，在浏览器或者其他软件中提交HTTP数据报文请求到服务端进行处理，提交的数据报文请求中可能包含了黑客构造的SQL语句或者命令。</code><br><code>2.服务端应用程序会将黑客提交的数据信息进行存储，通常是保存在数据库中，保存的数据信息的主要作用是为应用程序执行其他功能提供原始输入数据并对客户端请求做出响应。</code><br><code>3.黑客向服务端发送第二个与第一次不相同的请求数据信息。</code><br><code>4.服务端接收到黑客提交的第二个请求信息后，为了处理该请求，服务端会查询数据库中已经存储的数据信息并处理，从而导致黑客在第一次请求中构造的SQL语句或者命令在服务端环境中执行。</code><br><code>5.服务端返回执行的处理结果数据信息，黑客可以通过返回的结果数据信息判断二次注入漏洞利用是否成功</code></p>
 <h2 id="常用词汇"><a href="#常用词汇" class="headerlink" title="常用词汇"></a>常用词汇</h2><table>
 <thead>
 <tr>
@@ -373,58 +332,6 @@
     
 
     
-    
-<div class="share-btn share-icons tooltip-left">
-  <div class="tooltip tooltip-east">
-    <span class="tooltip-item">
-      <a href="javascript:;" class="share-sns share-outer">
-        <i class="icon icon-share"></i>
-      </a>
-    </span>
-    <span class="tooltip-content">
-      <div class="share-wrap">
-        <div class="share-icons">
-          <a class="weibo share-sns" href="javascript:;" data-type="weibo">
-            <i class="icon icon-weibo"></i>
-          </a>
-          <!-- <a class="weixin share-sns wxFab" href="javascript:;" data-type="weixin">
-            <i class="icon icon-weixin"></i>
-          </a> -->
-          <a class="qq share-sns" href="javascript:;" data-type="qq">
-            <i class="icon icon-qq"></i>
-          </a>
-          <a class="douban share-sns" href="javascript:;" data-type="douban">
-            <i class="icon icon-douban"></i>
-          </a>
-          <a class="qzone share-sns" href="javascript:;" data-type="qzone">
-            <i class="icon icon-qzone"></i>
-          </a>
-          <a class="facebook share-sns" href="javascript:;" data-type="facebook">
-            <i class="icon icon-facebook"></i>
-          </a>
-          <a class="twitter share-sns" href="javascript:;" data-type="twitter">
-            <i class="icon icon-twitter"></i>
-          </a>
-          <a class="google share-sns" href="javascript:;" data-type="google">
-            <i class="icon icon-google"></i>
-          </a>
-        </div>
-      </div>
-    </span>
-  </div>
-</div>
-
-<div class="page-modal wx-share js-wx-box">
-    <a class="close js-modal-close" href="javascript:;"><i class="icon icon-close"></i></a>
-    <p>扫一扫，分享到微信</p>
-    <div class="wx-qrcode">
-     <!-- <img src="//pan.baidu.com/share/qrcode?url=http://example.com/2025/02/12/SQL%E6%B3%A8%E5%85%A5%E7%AC%94%E8%AE%B0/" alt="微信分享二维码"> -->
-    </div>
-</div>
-
-<div class="mask js-mask"></div>
-
-    
     <div class="clearfix"></div>
   </div>
   </div>
@@ -455,6 +362,19 @@
         </div>
         
         
+        <div class="toc-container tooltip-left">
+            <i class="icon-font icon-category"></i>
+            <div class="tooltip tooltip-east">
+                <span class="tooltip-item">
+                </span>
+                <span class="tooltip-content">
+                    <div class="toc-article">
+                    <ol class="toc"><li class="toc-item toc-level-2"><a class="toc-link" href="#SQL%E6%B3%A8%E5%85%A5%EF%BC%88SQL-Injection%EF%BC%89%E6%98%AF%E4%B8%80%E7%A7%8D%E5%B8%B8%E8%A7%81%E7%9A%84Web%E5%AE%89%E5%85%A8%E6%BC%8F%E6%B4%9E%EF%BC%8C%E5%BD%A2%E6%88%90%E7%9A%84%E4%B8%BB%E8%A6%81%E5%8E%9F%E5%9B%A0%E6%98%AFweb%E5%BA%94%E7%94%A8%E7%A8%8B%E5%BA%8F%E5%9C%A8%E6%8E%A5%E6%94%B6%E7%9B%B8%E5%85%B3%E6%95%B0%E6%8D%AE%E5%8F%82%E6%95%B0%E6%97%B6%E6%9C%AA%E5%81%9A%E5%A5%BD%E8%BF%87%E6%BB%A4%EF%BC%8C%E5%B0%86%E5%85%B6%E7%9B%B4%E6%8E%A5%E5%B8%A6%E5%85%A5%E5%88%B0%E6%95%B0%E6%8D%AE%E5%BA%93%E4%B8%AD%E6%9F%A5%E8%AF%A2%EF%BC%8C%E5%AF%BC%E8%87%B4%E6%94%BB%E5%87%BB%E8%80%85%E5%8F%AF%E4%BB%A5%E6%8B%BC%E6%8E%A5%E6%89%A7%E8%A1%8C%E6%9E%84%E9%80%A0%E7%9A%84SQL%E8%AF%AD%E5%8F%A5%E3%80%82"><span class="toc-number">1.</span> <span class="toc-text">SQL注入（SQL Injection）是一种常见的Web安全漏洞，形成的主要原因是web应用程序在接收相关数据参数时未做好过滤，将其直接带入到数据库中查询，导致攻击者可以拼接执行构造的SQL语句。</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#%E6%BC%8F%E6%B4%9E%E4%BA%A7%E7%94%9F%E5%8E%9F%E5%9B%A0"><span class="toc-number">1.1.</span> <span class="toc-text">漏洞产生原因</span></a></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E6%94%BB%E5%87%BB%E6%96%B9%E5%BC%8F"><span class="toc-number">2.</span> <span class="toc-text">攻击方式</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#UNION-query-SQL-injection%EF%BC%88%E8%81%94%E5%90%88%E6%9F%A5%E8%AF%A2%E6%B3%A8%E5%85%A5%EF%BC%89"><span class="toc-number">3.</span> <span class="toc-text">UNION query SQL injection（联合查询注入）</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#Error-based-SQL-injection%EF%BC%88%E6%8A%A5%E9%94%99%E6%B3%A8%E5%85%A5%EF%BC%89"><span class="toc-number">3.1.</span> <span class="toc-text">Error-based SQL injection（报错注入）</span></a><ol class="toc-child"><li class="toc-item toc-level-4"><a class="toc-link" href="#group-by-%E9%87%8D%E5%A4%8D%E9%94%AE%E5%86%B2"><span class="toc-number">3.1.1.</span> <span class="toc-text">group by 重复键冲</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#extractvalue-%E5%87%BD%E6%95%B0"><span class="toc-number">3.1.2.</span> <span class="toc-text">extractvalue() 函数</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#updatexml-%E5%87%BD%E6%95%B0"><span class="toc-number">3.1.3.</span> <span class="toc-text">updatexml() 函数</span></a></li></ol></li><li class="toc-item toc-level-3"><a class="toc-link" href="#2-Boolean-based-blind-SQL-injection%EF%BC%88%E5%9F%BA%E4%BA%8E%E5%B8%83%E5%B0%94%E7%9A%84%E7%9B%B2%E6%B3%A8%EF%BC%89"><span class="toc-number">3.2.</span> <span class="toc-text">2. Boolean-based blind SQL injection（基于布尔的盲注）</span></a><ol class="toc-child"><li class="toc-item toc-level-4"><a class="toc-link" href="#%E5%B8%83%E5%B0%94%E7%9B%B2%E6%B3%A8%E9%A1%BA%E5%BA%8F"><span class="toc-number">3.2.1.</span> <span class="toc-text">布尔盲注顺序</span></a><ol class="toc-child"><li class="toc-item toc-level-5"><a class="toc-link" href="#%E5%88%A4%E6%96%AD%E5%BD%93%E5%89%8D%E6%95%B0%E6%8D%AE%E5%BA%93%E7%B1%BB%E5%9E%8B"><span class="toc-number">3.2.1.1.</span> <span class="toc-text">判断当前数据库类型</span></a></li><li class="toc-item toc-level-5"><a class="toc-link" href="#%E5%88%A4%E6%96%AD%E6%95%B0%E6%8D%AE%E5%BA%93%E5%90%8D"><span class="toc-number">3.2.1.2.</span> <span class="toc-text">判断数据库名</span></a></li><li class="toc-item toc-level-5"><a class="toc-link" href="#%E5%88%A4%E6%96%AD%E6%95%B0%E6%8D%AE%E5%BA%93%E7%9A%84%E8%A1%A8%E5%90%8D"><span class="toc-number">3.2.1.3.</span> <span class="toc-text">判断数据库的表名</span></a></li><li class="toc-item toc-level-5"><a class="toc-link" href="#%E5%88%A4%E6%96%AD%E8%A1%A8%E4%B8%AD%E7%9A%84%E5%AD%97%E6%AE%B5%E5%90%8D"><span class="toc-number">3.2.1.4.</span> <span class="toc-text">判断表中的字段名</span></a></li><li class="toc-item toc-level-5"><a class="toc-link" href="#%E7%88%86%E5%AD%97%E6%AE%B5%E4%B8%AD%E7%9A%84%E6%95%B0%E6%8D%AE"><span class="toc-number">3.2.1.5.</span> <span class="toc-text">爆字段中的数据</span></a></li><li class="toc-item toc-level-5"><a class="toc-link" href="#%E5%88%A4%E6%96%AD%E6%95%B0%E6%8D%AE%E5%BA%93%E7%B1%BB%E5%9E%8B%EF%BC%88%E5%93%AA%E4%B8%AA%E9%A1%B5%E9%9D%A2%E6%AD%A3%E5%B8%B8%E6%98%BE%E7%A4%BA%EF%BC%8C%E5%B0%B1%E5%B1%9E%E4%BA%8E%E5%93%AA%E4%B8%AA%E6%95%B0%E6%8D%AE%E5%BA%93%EF%BC%89"><span class="toc-number">3.2.1.6.</span> <span class="toc-text">判断数据库类型（哪个页面正常显示，就属于哪个数据库）</span></a><ol class="toc-child"><li class="toc-item toc-level-6"><a class="toc-link" href="#MySQL%E6%95%B0%E6%8D%AE%E5%BA%93%E8%A1%A8-information-schema-tables"><span class="toc-number">3.2.1.6.1.</span> <span class="toc-text">MySQL数据库表(information_schema.tables)</span></a></li><li class="toc-item toc-level-6"><a class="toc-link" href="#access-msysobjects"><span class="toc-number">3.2.1.6.2.</span> <span class="toc-text">access(msysobjects)</span></a></li><li class="toc-item toc-level-6"><a class="toc-link" href="#SQLServer-sysobjects"><span class="toc-number">3.2.1.6.3.</span> <span class="toc-text">SQLServer(sysobjects)</span></a></li></ol></li></ol></li></ol></li><li class="toc-item toc-level-3"><a class="toc-link" href="#3-Time-based-blind-SQL-injection%EF%BC%88%E5%9F%BA%E4%BA%8E%E6%97%B6%E9%97%B4%E7%9A%84%E7%9B%B2%E6%B3%A8%EF%BC%89"><span class="toc-number">3.3.</span> <span class="toc-text">3. Time-based blind SQL injection（基于时间的盲注）</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%EF%BC%88HTTP%E5%A4%B4%E6%B3%A8%E5%85%A5%EF%BC%89"><span class="toc-number">3.4.</span> <span class="toc-text">（HTTP头注入）</span></a><ol class="toc-child"><li class="toc-item toc-level-4"><a class="toc-link" href="#User-Agent"><span class="toc-number">3.4.1.</span> <span class="toc-text">User-Agent</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#cookie"><span class="toc-number">3.4.2.</span> <span class="toc-text">cookie</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#referer"><span class="toc-number">3.4.3.</span> <span class="toc-text">referer</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#X-forwarded-For"><span class="toc-number">3.4.4.</span> <span class="toc-text">X-forwarded-For</span></a></li></ol></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E5%AE%BD%E5%AD%97%E8%8A%82%E6%B3%A8%E5%85%A5"><span class="toc-number">3.5.</span> <span class="toc-text">宽字节注入</span></a><ol class="toc-child"><li class="toc-item toc-level-4"><a class="toc-link" href="#%E5%85%B3%E4%BA%8E%E7%BC%96%E7%A0%81"><span class="toc-number">3.5.1.</span> <span class="toc-text">关于编码</span></a><ol class="toc-child"><li class="toc-item toc-level-5"><a class="toc-link" href="#%E9%BB%91%E7%9B%92"><span class="toc-number">3.5.1.1.</span> <span class="toc-text">黑盒</span></a></li><li class="toc-item toc-level-5"><a class="toc-link" href="#%E7%99%BD%E7%9B%92"><span class="toc-number">3.5.1.2.</span> <span class="toc-text">白盒</span></a></li></ol></li></ol></li><li class="toc-item toc-level-3"><a class="toc-link" href="#4-Stacked-queries-SQL-injection%EF%BC%88%E5%A0%86%E5%8F%A0%E6%9F%A5%E8%AF%A2SQL%E6%B3%A8%E5%85%A5%EF%BC%89"><span class="toc-number">3.6.</span> <span class="toc-text">4. Stacked queries SQL injection（堆叠查询SQL注入）</span></a><ol class="toc-child"><li class="toc-item toc-level-4"><a class="toc-link" href="#%E5%A0%86%E5%8F%A0%E6%9F%A5%E8%AF%A2%E7%9A%84%E5%B1%80%E9%99%90%E6%80%A7"><span class="toc-number">3.6.1.</span> <span class="toc-text">堆叠查询的局限性</span></a></li></ol></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E4%BA%8C%E9%98%B6%E6%B3%A8%E5%85%A5"><span class="toc-number">3.7.</span> <span class="toc-text">二阶注入</span></a></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E5%B8%B8%E7%94%A8%E8%AF%8D%E6%B1%87"><span class="toc-number">4.</span> <span class="toc-text">常用词汇</span></a></li></ol>
+                    </div>
+                </span>
+            </div>
+        </div>
+        
     </div>
 </aside>
 
@@ -478,7 +398,7 @@
   <div class="outer">
     <div id="footer-info">
     	<div class="footer-left">
-    		&copy; 2025 <a href="http://example.com/" target="_blank">John Doe</a>
+    		&copy; 2025 <a href="https://erwuyishiqi-1017.github.io/" target="_blank">二五一十七</a>
     	</div>
       	<div class="footer-right">
 			
@@ -546,25 +466,17 @@
       
       
     
-      
-      
-      
-    
     
 
     <ul style="width: 70%">
     
     
       
-      <li style="width: 33.333333333333336%" q-on="click: openSlider(e, 'innerArchive')"><a href="javascript:void(0)" q-class="active:innerArchive">所有文章</a></li>
+      <li style="width: 50%" q-on="click: openSlider(e, 'innerArchive')"><a href="javascript:void(0)" q-class="active:innerArchive">所有文章</a></li>
       
         
       
-      <li style="width: 33.333333333333336%" q-on="click: openSlider(e, 'friends')"><a href="javascript:void(0)" q-class="active:friends">没朋友</a></li>
-      
-        
-      
-      <li style="width: 33.333333333333336%" q-on="click: openSlider(e, 'aboutme')"><a href="javascript:void(0)" q-class="active:aboutme">关于我</a></li>
+      <li style="width: 50%" q-on="click: openSlider(e, 'aboutme')"><a href="javascript:void(0)" q-class="active:aboutme">关于我</a></li>
       
         
     </ul>
@@ -635,10 +547,6 @@
     	</section>
     
 
-    
-    	<section class="tools-section tools-section-friends" q-show="friends">
-  		
-    	</section>
     
 
     
@@ -721,35 +629,6 @@
   </div>
 
   
-<script type="text/javascript" src="/plugins/TweenMax/TweenMax.min.js"></script>
-<script type="text/javascript" src="/plugins/TweenMax/HoverImg.js"></script>
-
-<script>
-
-
-  var hoverEffect = {
-    "subNav": ".left-col .social a"
-  }
-
-
-  for (var x in hoverEffect) {
-    // 初始化data-img属性值
-    let $em = document.querySelectorAll(hoverEffect[x]);
-    $em.forEach(($a) => {
-      //console.log($a.href);
-      if (isImageType($a.href)) {
-        $a.setAttribute("data-img", $a.href)
-      }
-    })
-    // 实现悬停元素预览图片效果
-    let $a = document.querySelectorAll(hoverEffect[x] + "[data-img]");
-    $a.forEach(($em) => {
-      new HoverImgFx1($em)
-    })
-  }
-
-</script>
-
   
 <script type="text/javascript" src="/plugins/activate-power-mode/activate-power-mode.js"></script>
 <script>

